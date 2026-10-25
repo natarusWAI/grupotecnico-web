@@ -128,4 +128,5 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - El worker de login pasó a esa cuenta: https://sveltia-cms-auth.grupotecnico86.workers.dev, importado del mismo repo `natarusWAI/sveltia-cms-auth`.
   - Los 3 valores están cargados como **Secret**. Se generó un client secret nuevo en la OAuth App.
   - `base_url` de `public/admin/config.yml` actualizado.
-- **Pendiente:** borrar el worker de la cuenta vieja y el client secret original de la OAuth App cuando el login nuevo esté probado. Pasar Web3Forms al mail nuevo.
+- **Pendiente:** borrar el worker de la cuenta vieja y el client secret original de la OAuth App cuando el login nuevo esté probado. 
+- **Web3Forms:** clave nueva creada con `grupotecnico86@gmail.com` y cargada en `sitio.json`. Las consultas llegan a ese mail; para verlas también en `nataruswai@gmail.com`, configurar el reenvío en Gmail.
