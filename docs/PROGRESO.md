@@ -58,9 +58,13 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Logos en la franja:**
   - Mercado Pago lleva su isotipo de Simple Icons, en el color de la marca.
   - DGI no lleva logo: el oficial (MEF-DGI) tiene el escudo nacional y puede sugerir respaldo del Estado. Se usa el texto «Factura electrónica DGI».
+- **Reseñas cargadas:** 8 reseñas reales de Google, todas de 5 estrellas, copiadas de capturas de la ficha.
+  - El texto va tal cual, sin corregir la ortografía.
+  - Los nombres van con la inicial del apellido («Edith T.»), por privacidad (Ley 18.331).
+  - Las reseñas no dicen barrio.
+  - En la home se ven en una grilla de 4 columnas en escritorio.
 - **Lighthouse móvil** (home, build local): Performance 100, Accesibilidad 100, Buenas prácticas 100, SEO 100.
 - **Pendientes:**
-  - Cargar 5 a 8 reseñas reales. El link de búsqueda de Google no se puede leer desde afuera: hay que copiarlas a mano.
-  - Cargar el link de la ficha de Google Business en `social.googleBusiness`.
+  - Cargar el link público de la ficha en `social.googleBusiness`: el de Maps, desde «Compartir», tipo `maps.app.goo.gl/…`. El link `business.google.com/n/…` es el panel del dueño y no sirve.
   - Correcciones de texto que quiere hacer el negocio antes de seguir.
   - Probar en un celular real que el menú desplegable no quede tapado por el hero.

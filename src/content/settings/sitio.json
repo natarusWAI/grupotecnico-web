@@ -140,7 +140,48 @@
   "warranty": {
     "text": "2 años en bombas, electroválvulas, condensadores, correas, termostatos y resistencias. 1 año en el resto de los repuestos. Siempre por escrito."
   },
-  "reviews": [],
+  "reviews": [
+    {
+      "name": "Edith T.",
+      "rating": 5,
+      "text": "Me puse en contacto obteniendo respuesta inmediata , el trato muy agradable , todo excelente, gracias Gastón , recomiendo"
+    },
+    {
+      "name": "Cacho R.",
+      "rating": 5,
+      "text": "Todo 10 puntos: el lavarropa quedó funcionando perfectamente. Trabajo responsable y excelente asesoramiento. Muy recomendable!"
+    },
+    {
+      "name": "Nataly H.",
+      "rating": 5,
+      "text": "10 puntos! Rápido, cumplidor y en precio. Recomiendo!!"
+    },
+    {
+      "name": "Juan A.",
+      "rating": 5,
+      "text": "Excelente atención y solucionado sin inconveniente, rápido y seguro"
+    },
+    {
+      "name": "Giseela R.",
+      "rating": 5,
+      "text": "Excelente servicio, rápidos y buena atención."
+    },
+    {
+      "name": "Marcelo M.",
+      "rating": 5,
+      "text": "Exelente altamente recomendable"
+    },
+    {
+      "name": "Oscar M.",
+      "rating": 5,
+      "text": "Exelente servicio."
+    },
+    {
+      "name": "Juan Pablo P.",
+      "rating": 5,
+      "text": "Buen profesional"
+    }
+  ],
   "analytics": {
     "ga4Id": "",
     "googleAdsId": "",
