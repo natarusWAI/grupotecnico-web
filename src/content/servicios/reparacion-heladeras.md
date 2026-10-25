@@ -2,8 +2,8 @@
 title: Reparación de heladeras a domicilio
 shortName: Heladeras
 seoTitle: Reparación de heladeras en Montevideo | Visita en el día
-seoDescription: Service de heladeras con y sin frost en tu casa. Visita en el día, presupuesto sin costo, repuestos originales y hasta 2 años de garantía.
-intro: Reparamos heladeras de frío seco (no frost) y frío húmedo, freezers y heladeras con dispensador, de todas las marcas. Vamos en el día y el presupuesto es sin costo.
+seoDescription: Service de heladeras no frost, frío húmedo e inverter en tu casa. Visita en el día, presupuesto sin costo, repuestos originales y hasta 2 años de garantía.
+intro: Especialistas en heladeras inverter. Reparamos heladeras de frío seco (no frost) y frío húmedo, inverter y freezers, de todas las marcas. Vamos en el día y el presupuesto es sin costo.
 order: 2
 image: /uploads/heladeras-1200.webp
 problems:
@@ -24,7 +24,7 @@ faqs:
   - q: ¿Venden repuestos?
     a: No vendemos repuestos sueltos. Hacemos la reparación completa con repuestos originales.
   - q: ¿Cómo puedo pagar?
-    a: Aceptamos Mercado Pago y emitimos factura electrónica.
+    a: En efectivo, por transferencia o con Mercado Pago. Emitimos factura electrónica.
 ---
 
 Una heladera que no enfría no puede esperar. Por eso coordinamos la visita en el día y, en la mayoría de los casos, la dejamos funcionando en la misma visita.
@@ -34,4 +34,4 @@ Una heladera que no enfría no puede esperar. Por eso coordinamos la visita en e
 1. Nos escribís por WhatsApp o nos llamás y coordinamos la visita en el día.
 2. El técnico diagnostica la heladera en tu casa y te pasa el presupuesto sin costo.
 3. Si lo aprobás, la reparamos con repuestos originales y te dejamos la garantía por escrito.
-4. Pagás con Mercado Pago o como prefieras, con factura electrónica.
+4. Pagás en efectivo, por transferencia o con Mercado Pago, y te damos factura electrónica.

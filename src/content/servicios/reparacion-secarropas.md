@@ -37,7 +37,7 @@ El técnico va a tu casa, revisa el equipo y te explica qué tiene antes de camb
 1. Nos escribís por WhatsApp o nos llamás y coordinamos la visita en el día.
 2. El técnico diagnostica el secarropas en tu casa y te pasa el presupuesto sin costo.
 3. Si lo aprobás, lo reparamos en el momento, sin llevarnos el equipo.
-4. Pagás con Mercado Pago o como prefieras, con factura electrónica.
+4. Pagás en efectivo, por transferencia o con Mercado Pago, y te damos factura electrónica.
 
 ## Un consejo para que dure más
 

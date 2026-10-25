@@ -25,7 +25,7 @@ faqs:
   - q: ¿Venden repuestos?
     a: No vendemos repuestos sueltos. Hacemos la reparación completa con repuestos originales.
   - q: ¿Cómo puedo pagar?
-    a: Aceptamos Mercado Pago y emitimos factura electrónica.
+    a: En efectivo, por transferencia o con Mercado Pago. Emitimos factura electrónica.
 ---
 
 Con más de 35 años reparando lavarropas, conocemos tanto las marcas más comunes como las menos frecuentes en Uruguay. El técnico llega con herramientas de diagnóstico, identifica la falla y te explica qué hay que cambiar antes de tocar nada.
@@ -35,4 +35,4 @@ Con más de 35 años reparando lavarropas, conocemos tanto las marcas más comun
 1. Nos escribís por WhatsApp o nos llamás y coordinamos la visita en el día.
 2. El técnico diagnostica el lavarropas en tu casa y te pasa el presupuesto sin costo.
 3. Si lo aprobás, lo reparamos con repuestos originales y te dejamos la garantía por escrito.
-4. Pagás con Mercado Pago o como prefieras, con factura electrónica.
+4. Pagás en efectivo, por transferencia o con Mercado Pago, y te damos factura electrónica.
