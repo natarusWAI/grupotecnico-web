@@ -55,7 +55,7 @@ await sharp({ create: { width: 180, height: 180, channels: 3, background: '#ffff
 const ogLogo = await sharp(logo).resize({ width: 1000 }).toBuffer();
 await sharp({ create: { width: 1200, height: 630, channels: 3, background: '#ffffff' } })
   .composite([{ input: ogLogo, gravity: 'center' }])
-  .png()
+  .png({ palette: true })
   .toFile('public/og-default.png');
 
 for (const f of ['public/favicon.svg', 'public/favicon.png', 'public/apple-touch-icon.png', 'public/og-default.png']) {

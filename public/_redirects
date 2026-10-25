@@ -1,6 +1,8 @@
 # Cloudflare Pages (fase 2). Redirecciones 301 de las URLs viejas de WordPress.
 /cual-es-la-diferencia-entre-una-heladera-de-frio-seco-y-humedo/  /blog/heladera-frio-seco-o-humedo  301
+/cual-es-la-diferencia-entre-una-heladera-de-frio-seco-y-humedo  /blog/heladera-frio-seco-o-humedo  301
 /problemas-simples-de-solucionar-del-lavarropas/  /blog/problemas-simples-lavarropas  301
+/problemas-simples-de-solucionar-del-lavarropas  /blog/problemas-simples-lavarropas  301
 /category/*  /blog  301
 /2020/*  /blog  301
 /wp-admin/*  /admin/  302

@@ -11,7 +11,10 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const s = await getSettings();
 const d = post.data;
-const fmt = new Intl.DateTimeFormat('es-UY', { dateStyle: 'long' });
+// El sufijo con la marca solo si el título entero entra en 70 caracteres.
+const fullTitle = `${d.title} | ${s.businessName}`;
+const title = fullTitle.length <= 70 ? fullTitle : d.title;
+const fmt =new Intl.DateTimeFormat('es-UY', { dateStyle: 'long' });
 const jsonLd = [{
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -19,14 +22,14 @@ const jsonLd = [{
   description: d.description,
   datePublished: d.date.toISOString(),
   dateModified: (d.updated ?? d.date).toISOString(),
-  image: d.cover ? new URL(url(d.cover), Astro.site).href : undefined,
+  image: new URL(url(d.cover ?? '/og-default.png'), Astro.site).href,
   inLanguage: 'es-UY',
   author: { '@type': 'Organization', name: s.businessName },
   publisher: { '@id': new URL(url('/#negocio'), Astro.site).href },
   mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).href,
 }];
 ---
-<Base title={`${d.title} | ${s.businessName}`} description={d.description} image={d.cover} type="article" jsonLd={jsonLd}>
+<Base title={title} description={d.description} image={d.cover} type="article" jsonLd={jsonLd}>
   <article class="container-x max-w-3xl py-14">
     <nav aria-label="Migas" class="text-sm text-slate-500"><a href={url('/')}>Inicio</a> / <a href={url('/blog')}>Blog</a></nav>
     <p class="mt-4 text-xs font-semibold text-brand-600 uppercase">{d.category} · <time datetime={d.date.toISOString()}>{fmt.format(d.date)}</time></p>

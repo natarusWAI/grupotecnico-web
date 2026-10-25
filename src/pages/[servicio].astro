@@ -25,7 +25,7 @@ const jsonLd = [
     serviceType: d.title,
     description: d.seoDescription,
     provider: { '@id': new URL(url('/#negocio'), Astro.site).href },
-    areaServed: s.zones.map((z) => ({ '@type': 'Place', name: z.name })),
+    areaServed: s.zones.flatMap((z) => z.areas).map((name) => ({ '@type': 'Place', name: `${name}, Uruguay` })),
   },
   {
     '@context': 'https://schema.org',
