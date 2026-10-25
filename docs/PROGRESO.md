@@ -70,3 +70,15 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Pendientes:**
   - Correcciones de texto que quiere hacer el negocio antes de seguir.
   - Probar en un celular real que el menú desplegable no quede tapado por el hero.
+
+## 2026-10-25 · Fase 3: panel con login de GitHub
+- **Worker de login:** `sveltia-cms-auth` en Cloudflare Workers: https://sveltia-cms-auth.nataruswai-c32.workers.dev
+  - Se creó desde Cloudflare como repo privado aparte (`natarusWAI/sveltia-cms-auth`), no dentro de este repo.
+  - Variables `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` y `ALLOWED_DOMAINS` (`nataruswai.github.io, grupotecnico.com.uy, *.grupotecnico.com.uy`). Las tres van como **Secret**: los despliegues desde Git borran las variables comunes cargadas en el panel de Cloudflare.
+- **OAuth App de GitHub** «Grupo Técnico CMS» con callback `<worker>/callback` y sin vencimiento de tokens (el worker no los renueva).
+- `base_url` del worker activado en `public/admin/config.yml`.
+- **Prueba de punta a punta:** cambiar el WhatsApp desde el panel generó un commit y la web se republicó con el número nuevo en ~1 min. Después se volvió a 59897125160 de la misma forma.
+- El panel reescribe `sitio.json` en el orden de sus campos y agrega `"area": ""` a las reseñas. No afecta la web.
+- **Pendientes:**
+  - En la Fase 5, con el dominio en Cloudflare Pages, revisar que `/admin` funcione en `grupotecnico.com.uy`. Si se usan las vistas previas `*.pages.dev`, sumarlas a `ALLOWED_DOMAINS`.
+  - Las imágenes que se suban dentro del texto de un post apuntan a `/uploads/...` sin el prefijo `/grupotecnico-web`: en la vista previa de GitHub Pages no se ven, pero en el dominio final sí.
