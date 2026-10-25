@@ -1,0 +1,67 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Diferenciales from '../components/Diferenciales.astro';
+import Faq from '../components/Faq.astro';
+import Zonas from '../components/Zonas.astro';
+import { getSettings, url, whatsappLink } from '../lib/site';
+
+export async function getStaticPaths() {
+  const servicios = await getCollection('servicios');
+  return servicios.map((entry) => ({ params: { servicio: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const s = await getSettings();
+const d = entry.data;
+const waMsg = `Hola Grupo Técnico, necesito reparar mi ${d.shortName.toLowerCase().replace(/s$/, '')}. `;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: d.title,
+    serviceType: d.title,
+    description: d.seoDescription,
+    provider: { '@id': new URL(url('/#negocio'), Astro.site).href },
+    areaServed: s.zones.map((z) => ({ '@type': 'Place', name: z.name })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: new URL(url('/'), Astro.site).href },
+      { '@type': 'ListItem', position: 2, name: d.title },
+    ],
+  },
+  ...(d.faqs.length
+    ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }]
+    : []),
+];
+---
+<Base title={d.seoTitle} description={d.seoDescription} jsonLd={jsonLd}>
+  <section class="bg-gradient-to-br from-brand-900 to-brand-700 text-white">
+    <div class="container-x grid gap-10 py-14 md:grid-cols-2">
+      <div>
+        <nav aria-label="Migas" class="text-sm text-blue-200"><a href={url('/')}>Inicio</a> / {d.shortName}</nav>
+        <h1 class="mt-3 text-4xl font-extrabold">{d.title} en Montevideo y Ciudad de la Costa</h1>
+        <p class="mt-4 text-lg text-blue-100">{d.intro}</p>
+        {s.whatsapp.enabled && <a class="btn-whatsapp mt-8" href={whatsappLink(s.whatsapp.number, waMsg)} target="_blank" rel="noopener">Coordinar visita por WhatsApp</a>}
+      </div>
+      <div class="text-slate-800"><ContactForm /></div>
+    </div>
+  </section>
+
+  <section class="container-x grid gap-10 py-16 md:grid-cols-2">
+    <div>
+      <h2 class="text-2xl font-extrabold text-brand-900">Fallas que reparamos</h2>
+      <ul class="mt-4 space-y-2">{d.problems.map((p) => <li class="flex gap-2"><span class="text-brand-600">✓</span>{p}</li>)}</ul>
+    </div>
+    <article class="prose-gt"><Content /></article>
+  </section>
+
+  <Diferenciales />
+  <Zonas compact />
+  {d.faqs.length > 0 && <Faq faqs={d.faqs} />}
+</Base>

@@ -1,0 +1,28 @@
+---
+import { getSettings, url, telLink } from '../lib/site';
+const s = await getSettings();
+---
+<footer class="mt-16 bg-brand-900 text-slate-200">
+  <div class="container-x grid gap-8 py-12 md:grid-cols-3">
+    <div>
+      <p class="text-lg font-bold text-white">{s.businessName}</p>
+      <p class="mt-2 text-sm">{s.tagline}.</p>
+      <p class="mt-2 text-sm">Solo servicio técnico: no vendemos repuestos sueltos.</p>
+    </div>
+    <div class="text-sm">
+      <p class="font-semibold text-white">Contacto</p>
+      <address class="mt-2 not-italic">{s.address.street}, {s.address.city}</address>
+      <ul class="mt-2 space-y-1">
+        {s.phones.map((p) => <li><a class="hover:underline" href={telLink(p.number)}>{p.label}: {p.number}</a></li>)}
+        <li><a class="hover:underline" href={`mailto:${s.email}`}>{s.email}</a></li>
+        <li>{s.hours.text}</li>
+      </ul>
+    </div>
+    <div class="text-sm">
+      <p class="font-semibold text-white">Zonas</p>
+      <p class="mt-2">{s.zones.map((z) => z.name).join(' · ')}</p>
+      <p class="mt-4"><a class="hover:underline" href={url('/privacidad')}>Política de privacidad</a></p>
+    </div>
+  </div>
+  <p class="border-t border-white/10 py-4 text-center text-xs">© {new Date().getFullYear()} {s.businessName}. Factura electrónica · Aceptamos Mercado Pago.</p>
+</footer>

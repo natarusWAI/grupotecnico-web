@@ -1,0 +1,56 @@
+{
+  "businessName": "Grupo Técnico",
+  "legalName": "",
+  "tagline": "Reparación de lavarropas y heladeras a domicilio en Montevideo y Ciudad de la Costa",
+  "yearsExperience": 35,
+  "address": {
+    "street": "Enrique Martínez 1631",
+    "city": "Montevideo",
+    "department": "Montevideo",
+    "postalCode": "",
+    "lat": -34.8762,
+    "lng": -56.1644
+  },
+  "phones": [
+    { "label": "Fijo", "number": "2358 2250" },
+    { "label": "Celular", "number": "097 125 160" },
+    { "label": "Celular", "number": "097 498 778" }
+  ],
+  "email": "contacto@grupotecnico.com.uy",
+  "hours": {
+    "text": "Lunes a sábado de 9:00 a 19:00",
+    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "09:00",
+    "closes": "19:00"
+  },
+  "whatsapp": {
+    "enabled": true,
+    "number": "59897125160",
+    "message": "Hola Grupo Técnico, quiero coordinar una visita para reparar mi ",
+    "label": "Escribinos por WhatsApp"
+  },
+  "contactForm": {
+    "provider": "web3forms",
+    "web3formsKey": "REEMPLAZAR-CON-ACCESS-KEY-DE-WEB3FORMS",
+    "recipient": "contacto@grupotecnico.com.uy",
+    "subject": "Nueva consulta desde la web",
+    "successMessage": "¡Gracias! Recibimos tu consulta y te contactamos a la brevedad."
+  },
+  "zones": [
+    {
+      "name": "Montevideo",
+      "areas": ["Carrasco", "Malvín", "Punta Gorda", "Buceo", "Pocitos", "Punta Carretas", "Parque Batlle", "La Blanqueada", "Unión", "Jacinto Vera", "Larrañaga", "Cordón", "Centro", "Ciudad Vieja", "Tres Cruces", "Prado", "Aguada", "Maroñas", "Flor de Maroñas", "Piedras Blancas", "Manga", "Colón", "Sayago", "Peñarol", "Cerro", "Belvedere"]
+    },
+    {
+      "name": "Ciudad de la Costa (hasta el Peaje de Pando)",
+      "areas": ["Paso Carrasco", "Barra de Carrasco", "Shangrilá", "Lagomar", "Solymar", "Lomas de Solymar", "Colinas de Solymar", "El Pinar", "Médanos de Solymar", "Parque Carrasco"]
+    },
+    {
+      "name": "Ruta 5 (hasta La Paz)",
+      "areas": ["Colón", "Lezica", "Abayubá", "La Paz"]
+    }
+  ],
+  "brands": ["Samsung", "LG", "Whirlpool", "Electrolux", "Drean", "Patrick", "James", "Midea", "Panavox", "Bosch", "Philco", "Enxuta"],
+  "analytics": { "ga4Id": "", "googleAdsId": "", "metaPixelId": "" },
+  "social": { "facebook": "", "instagram": "", "googleBusiness": "" }
+}

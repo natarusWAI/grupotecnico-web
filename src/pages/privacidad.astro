@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import { getSettings } from '../lib/site';
+const s = await getSettings();
+---
+<Base title={`Política de privacidad | ${s.businessName}`} description="Cómo tratamos los datos personales que nos enviás desde la web.">
+  <article class="container-x prose-gt max-w-3xl py-14">
+    <h1 class="text-4xl font-extrabold text-brand-900">Política de privacidad</h1>
+    <p><strong>Borrador para revisar con un asesor.</strong> {s.businessName} usa los datos que enviás por el formulario o WhatsApp (nombre, teléfono, zona y descripción de la falla) solo para responder tu consulta y coordinar la visita, de acuerdo con la Ley N.º 18.331 de Protección de Datos Personales.</p>
+    <p>No vendemos ni cedemos tus datos. Podés pedir acceso, rectificación o eliminación escribiendo a <a href={`mailto:${s.email}`}>{s.email}</a>.</p>
+    <p>La web usa herramientas de medición (Google Analytics y, si está activo, píxeles de publicidad) para saber qué páginas se visitan y medir campañas.</p>
+  </article>
+</Base>

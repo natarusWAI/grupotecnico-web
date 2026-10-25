@@ -1,0 +1,107 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { getSettings, url } from '../lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown>[];
+}
+
+const { title, description, image = '/og-default.png', type = 'website', noindex = false, jsonLd = [] } = Astro.props;
+const s = await getSettings();
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(url(image), Astro.site);
+
+const business = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': new URL(url('/#negocio'), Astro.site).href,
+  name: s.businessName,
+  description: s.tagline,
+  url: new URL(url('/'), Astro.site).href,
+  image: ogImage.href,
+  telephone: s.phones.map((p) => `+598 ${p.number.replace(/^0/, '')}`),
+  email: s.email,
+  priceRange: '$$',
+  paymentAccepted: 'Mercado Pago, efectivo, transferencia',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: s.address.street,
+    addressLocality: s.address.city,
+    addressRegion: s.address.department,
+    postalCode: s.address.postalCode || undefined,
+    addressCountry: 'UY',
+  },
+  geo: s.address.lat ? { '@type': 'GeoCoordinates', latitude: s.address.lat, longitude: s.address.lng } : undefined,
+  openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: s.hours.days, opens: s.hours.opens, closes: s.hours.closes }],
+  areaServed: s.zones.flatMap((z) => z.areas).map((name) => ({ '@type': 'Place', name: `${name}, Uruguay` })),
+  sameAs: Object.values(s.social).filter(Boolean),
+};
+// PREVIEW=true en GitHub Pages: la vista previa no se indexa.
+const preview = process.env.PREVIEW === 'true';
+const ga = s.analytics.ga4Id || s.analytics.googleAdsId;
+---
+<!doctype html>
+<html lang="es-UY">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {(noindex || preview) && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
+    <link rel="sitemap" href={url('/sitemap-index.xml')} />
+    <link rel="alternate" type="application/rss+xml" title={`Blog de ${s.businessName}`} href={url('/rss.xml')} />
+    <meta name="geo.region" content="UY-MO" />
+    <meta name="geo.placename" content="Montevideo" />
+    <meta property="og:locale" content="es_UY" />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={s.businessName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0848aa" />
+    <script type="application/ld+json" set:html={JSON.stringify([business, ...jsonLd])} />
+    {ga && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga}`}></script>
+        <script is:inline define:vars={{ ga4: s.analytics.ga4Id, ads: s.analytics.googleAdsId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          if (ga4) gtag('config', ga4);
+          if (ads) gtag('config', ads);
+        </script>
+      </>
+    )}
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:p-3">Saltar al contenido</a>
+    <Header />
+    <main id="contenido" class="flex-1"><slot /></main>
+    <Footer />
+    <WhatsAppButton />
+    <script is:inline>
+      // Medición de conversiones: clics en WhatsApp y teléfono (GA4 / Google Ads / Meta).
+      document.addEventListener('click', (e) => {
+        const a = e.target instanceof Element ? e.target.closest('a') : null;
+        if (!a) return;
+        const kind = a.href.includes('wa.me') ? 'whatsapp_click' : a.href.startsWith('tel:') ? 'phone_click' : null;
+        if (!kind) return;
+        window.gtag?.('event', kind, { link_url: a.href, page_path: location.pathname });
+        window.fbq?.('track', 'Contact', { method: kind });
+      });
+    </script>
+  </body>
+</html>

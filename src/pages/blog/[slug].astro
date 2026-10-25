@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getSettings, url, whatsappLink } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const s = await getSettings();
+const d = post.data;
+const fmt = new Intl.DateTimeFormat('es-UY', { dateStyle: 'long' });
+const jsonLd = [{
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: d.title,
+  description: d.description,
+  datePublished: d.date.toISOString(),
+  dateModified: (d.updated ?? d.date).toISOString(),
+  image: d.cover ? new URL(url(d.cover), Astro.site).href : undefined,
+  inLanguage: 'es-UY',
+  author: { '@type': 'Organization', name: s.businessName },
+  publisher: { '@id': new URL(url('/#negocio'), Astro.site).href },
+  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).href,
+}];
+---
+<Base title={`${d.title} | ${s.businessName}`} description={d.description} image={d.cover} type="article" jsonLd={jsonLd}>
+  <article class="container-x max-w-3xl py-14">
+    <nav aria-label="Migas" class="text-sm text-slate-500"><a href={url('/')}>Inicio</a> / <a href={url('/blog')}>Blog</a></nav>
+    <p class="mt-4 text-xs font-semibold text-brand-600 uppercase">{d.category} · <time datetime={d.date.toISOString()}>{fmt.format(d.date)}</time></p>
+    <h1 class="mt-2 text-4xl font-extrabold text-brand-900">{d.title}</h1>
+    {d.cover && <img src={url(d.cover)} alt={d.coverAlt ?? ''} class="mt-8 w-full rounded-2xl" />}
+    <div class="prose-gt mt-8"><Content /></div>
+    <aside class="mt-12 rounded-2xl bg-brand-50 p-6">
+      <p class="text-lg font-bold text-brand-900">¿Necesitás un técnico?</p>
+      <p class="mt-1 text-slate-700">Vamos en el día, el presupuesto es sin costo y la reparación tiene hasta 2 años de garantía.</p>
+      {s.whatsapp.enabled && <a class="btn-whatsapp mt-4" href={whatsappLink(s.whatsapp.number, s.whatsapp.message)} target="_blank" rel="noopener">Escribinos por WhatsApp</a>}
+    </aside>
+  </article>
+</Base>

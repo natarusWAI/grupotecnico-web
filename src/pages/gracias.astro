@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import { getSettings, url } from '../lib/site';
+const s = await getSettings();
+---
+<Base title="¡Gracias por tu consulta!" description="Recibimos tu consulta." noindex>
+  <section class="container-x py-24 text-center">
+    <h1 class="text-4xl font-extrabold text-brand-900">¡Gracias!</h1>
+    <p class="mt-4 text-lg">{s.contactForm.successMessage}</p>
+    <a class="btn-primary mt-8" href={url('/')}>Volver al inicio</a>
+  </section>
+  <script is:inline>window.gtag?.('event', 'generate_lead', { method: 'form_redirect' });</script>
+</Base>

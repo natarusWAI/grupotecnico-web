@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { url } from '../../lib/site';
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => +b.data.date - +a.data.date);
+const fmt = new Intl.DateTimeFormat('es-UY', { dateStyle: 'long' });
+---
+<Base title="Blog: consejos para tu lavarropas y heladera | Grupo Técnico" description="Consejos de nuestros técnicos para cuidar, usar y detectar fallas en tu lavarropas y heladera.">
+  <section class="container-x py-14">
+    <h1 class="text-4xl font-extrabold text-brand-900">Consejos del técnico</h1>
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map((p) => (
+        <a href={url(`/blog/${p.id}`)} class="flex flex-col rounded-2xl ring-1 ring-slate-200 hover:ring-brand-600">
+          {p.data.cover && <img src={url(p.data.cover)} alt={p.data.coverAlt ?? ''} loading="lazy" class="aspect-video w-full rounded-t-2xl object-cover" />}
+          <div class="p-6">
+            <p class="text-xs font-semibold text-brand-600 uppercase">{p.data.category} · <time datetime={p.data.date.toISOString()}>{fmt.format(p.data.date)}</time></p>
+            <h2 class="mt-2 text-lg font-bold">{p.data.title}</h2>
+            <p class="mt-2 text-sm text-slate-600">{p.data.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

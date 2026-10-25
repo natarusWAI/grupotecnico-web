@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/site';
+---
+<Base title="Página no encontrada | Grupo Técnico" description="La página que buscás no existe." noindex>
+  <section class="container-x py-24 text-center">
+    <h1 class="text-4xl font-extrabold text-brand-900">No encontramos esa página</h1>
+    <a class="btn-primary mt-8" href={url('/')}>Ir al inicio</a>
+  </section>
+</Base>

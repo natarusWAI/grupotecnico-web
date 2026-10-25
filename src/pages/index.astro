@@ -1,0 +1,123 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Diferenciales from '../components/Diferenciales.astro';
+import Faq from '../components/Faq.astro';
+import Zonas from '../components/Zonas.astro';
+import { getSettings, url, whatsappLink, telLink } from '../lib/site';
+
+const s = await getSettings();
+const servicios = (await getCollection('servicios')).sort((a, b) => a.data.order - b.data.order);
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => +b.data.date - +a.data.date).slice(0, 3);
+const mainPhone = s.phones.find((p) => p.label !== 'Fijo') ?? s.phones[0];
+
+const faqs = [
+  { q: '¿La visita tiene costo?', a: 'No. La visita y el presupuesto son sin costo. Solo pagás si aprobás la reparación.' },
+  { q: '¿Venden repuestos?', a: 'No. Somos un servicio técnico: hacemos la reparación completa con repuestos originales y garantía.' },
+  { q: '¿Hasta dónde van?', a: 'Toda Montevideo, Ciudad de la Costa hasta el Peaje de Pando y por Ruta 5 hasta La Paz.' },
+  { q: '¿Qué garantía tienen las reparaciones?', a: 'Entre 1 y 2 años según el repuesto, siempre por escrito.' },
+  { q: '¿Cómo puedo pagar?', a: 'Con Mercado Pago, efectivo o transferencia. Emitimos factura electrónica.' },
+];
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Base
+  title="Reparación de lavarropas y heladeras en Montevideo | Grupo Técnico"
+  description="Service de lavarropas y heladeras a domicilio. Visita en el día y presupuesto sin costo, repuestos originales, 1 y 2 años de garantía. Montevideo y Ciudad de la Costa."
+  jsonLd={[faqLd]}
+>
+  <section class="bg-gradient-to-br from-brand-900 to-brand-700 text-white">
+    <div class="container-x grid items-center gap-10 py-16 md:grid-cols-2 md:py-24">
+      <div>
+        <p class="inline-block rounded-full bg-white/10 px-3 py-1 text-sm">Más de {s.yearsExperience} años en Montevideo</p>
+        <h1 class="mt-4 text-4xl leading-tight font-extrabold md:text-5xl">Reparamos tu lavarropas o heladera <span class="text-accent-500">hoy mismo</span>, en tu casa</h1>
+        <p class="mt-4 text-lg text-blue-100">Visita en el día y presupuesto sin costo. Repuestos originales y hasta 2 años de garantía.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          {s.whatsapp.enabled && <a class="btn-whatsapp" href={whatsappLink(s.whatsapp.number, s.whatsapp.message)} target="_blank" rel="noopener">Coordinar por WhatsApp</a>}
+          {mainPhone && <a class="btn-ghost" href={telLink(mainPhone.number)}>Llamar al {mainPhone.number}</a>}
+        </div>
+        <ul class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-blue-100">
+          <li>✓ Factura electrónica</li><li>✓ Mercado Pago</li><li>✓ {s.hours.text}</li>
+        </ul>
+      </div>
+      <div class="text-slate-800" id="pedir">
+        <p class="mb-3 text-lg font-bold text-white">Pedí tu visita sin costo</p>
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="container-x py-16" aria-labelledby="serv-title">
+    <h2 id="serv-title" class="text-3xl font-extrabold text-brand-900">Qué reparamos</h2>
+    <p class="mt-2 text-slate-600">Somos servicio técnico: no vendemos repuestos sueltos, te entregamos el equipo funcionando y con garantía.</p>
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+      {servicios.map((sv) => (
+        <a href={url(`/${sv.id}`)} class="group rounded-2xl p-6 ring-1 ring-slate-200 transition hover:shadow-md hover:ring-brand-600">
+          <h3 class="text-xl font-bold text-brand-900 group-hover:text-brand-600">{sv.data.title}</h3>
+          <p class="mt-2 text-slate-600">{sv.data.intro}</p>
+          <ul class="mt-4 grid grid-cols-1 gap-1 text-sm text-slate-700 sm:grid-cols-2">
+            {sv.data.problems.slice(0, 6).map((p) => <li>• {p}</li>)}
+          </ul>
+          <span class="mt-4 inline-block font-semibold text-brand-600">Ver más →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <Diferenciales />
+
+  <section class="container-x py-16" aria-labelledby="como-title">
+    <h2 id="como-title" class="text-3xl font-extrabold text-brand-900">Así de fácil</h2>
+    <ol class="mt-8 grid gap-6 md:grid-cols-4">
+      {['Nos escribís por WhatsApp o llamás', 'Vamos a tu casa en el día', 'Presupuesto sin costo, sin compromiso', 'Reparamos con garantía y factura'].map((t, i) => (
+        <li class="rounded-2xl p-6 ring-1 ring-slate-200"><span class="text-3xl font-extrabold text-brand-600">{i + 1}</span><p class="mt-2 font-medium">{t}</p></li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="bg-slate-50 py-12" aria-labelledby="marcas-title">
+    <div class="container-x">
+      <h2 id="marcas-title" class="text-center text-2xl font-bold text-brand-900">Trabajamos con todas las marcas</h2>
+      <p class="mt-4 text-center text-slate-600">{s.brands.join(' · ')}</p>
+    </div>
+  </section>
+
+  <Zonas compact />
+
+  {posts.length > 0 && (
+    <section class="container-x py-8" aria-labelledby="blog-title">
+      <h2 id="blog-title" class="text-3xl font-extrabold text-brand-900">Consejos del técnico</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        {posts.map((p) => (
+          <a href={url(`/blog/${p.id}`)} class="rounded-2xl p-6 ring-1 ring-slate-200 hover:ring-brand-600">
+            <p class="text-xs font-semibold text-brand-600 uppercase">{p.data.category}</p>
+            <h3 class="mt-2 font-bold">{p.data.title}</h3>
+            <p class="mt-2 text-sm text-slate-600">{p.data.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <Faq faqs={faqs} />
+
+  <section id="contacto" class="bg-brand-50 py-16" aria-labelledby="contacto-title">
+    <div class="container-x grid gap-10 md:grid-cols-2">
+      <div>
+        <h2 id="contacto-title" class="text-3xl font-extrabold text-brand-900">Contacto</h2>
+        <p class="mt-2 text-slate-600">Escribinos y coordinamos la visita en el día.</p>
+        <ul class="mt-6 space-y-2">
+          {s.phones.map((p) => <li><a class="font-semibold text-brand-700" href={telLink(p.number)}>{p.label}: {p.number}</a></li>)}
+          <li><a class="text-brand-700" href={`mailto:${s.email}`}>{s.email}</a></li>
+          <li>{s.address.street}, {s.address.city}</li>
+          <li>{s.hours.text}</li>
+        </ul>
+      </div>
+      <ContactForm />
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,23 @@
+---
+const items = [
+  { icon: '🚐', title: 'Visita en el día', text: 'Coordinamos y vamos hoy mismo. El presupuesto es sin costo.' },
+  { icon: '🔧', title: 'Repuestos originales', text: 'Solo usamos repuestos originales de cada marca.' },
+  { icon: '🛡️', title: '1 y 2 años de garantía', text: 'Garantía por escrito según el repuesto que cambiamos.' },
+  { icon: '🧾', title: 'Factura electrónica', text: 'Toda reparación lleva su comprobante fiscal (CFE).' },
+  { icon: '💳', title: 'Pagás con Mercado Pago', text: 'También efectivo o transferencia, como te quede cómodo.' },
+];
+---
+<section aria-labelledby="dif-title" class="bg-brand-50 py-16">
+  <div class="container-x">
+    <h2 id="dif-title" class="text-center text-3xl font-extrabold text-brand-900">Por qué elegir Grupo Técnico</h2>
+    <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+      {items.map((i) => (
+        <li class="rounded-2xl bg-white p-6 text-center shadow-sm">
+          <span class="text-4xl" aria-hidden="true">{i.icon}</span>
+          <h3 class="mt-3 font-bold text-brand-900">{i.title}</h3>
+          <p class="mt-2 text-sm text-slate-600">{i.text}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

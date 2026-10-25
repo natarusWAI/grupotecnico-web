@@ -1,0 +1,136 @@
+# Panel de administración (Sveltia CMS). Cada cambio guardado es un commit en GitHub
+# y la web se vuelve a publicar sola en 1-2 minutos.
+# Mantener sincronizado con src/content.config.ts.
+backend:
+  name: github
+  repo: natarusWAI/grupotecnico-web
+  branch: main
+  # base_url: https://sveltia-cms-auth.TU-CUENTA.workers.dev   # <- activar al configurar el login con GitHub (ver docs/admin-cms.md)
+  commit_messages:
+    create: 'contenido: crear {{collection}} "{{slug}}"'
+    update: 'contenido: actualizar {{collection}} "{{slug}}"'
+    delete: 'contenido: borrar {{collection}} "{{slug}}"'
+
+locale: es
+media_folder: public/uploads
+public_folder: /uploads
+site_url: https://grupotecnico.com.uy
+
+collections:
+  - name: blog
+    label: Blog
+    label_singular: Artículo
+    folder: src/content/blog
+    create: true
+    slug: '{{slug}}'
+    sortable_fields: [date, title]
+    summary: '{{title}} ({{date}})'
+    fields:
+      - { name: title, label: Título (máx. 70 caracteres), widget: string, pattern: ['^.{1,70}$', 'Máximo 70 caracteres'] }
+      - { name: description, label: Descripción para Google (máx. 160), widget: text, pattern: ['^.{50,160}$', 'Entre 50 y 160 caracteres'] }
+      - { name: date, label: Fecha de publicación, widget: datetime, format: 'YYYY-MM-DD', time_format: false }
+      - { name: updated, label: Última actualización, widget: datetime, format: 'YYYY-MM-DD', time_format: false, required: false }
+      - { name: category, label: Categoría, widget: select, options: [Lavarropas, Heladeras, Consejos, Novedades] }
+      - { name: cover, label: Imagen de portada, widget: image, required: false }
+      - { name: coverAlt, label: Texto alternativo de la imagen, widget: string, required: false }
+      - { name: draft, label: Borrador (no publicar), widget: boolean, default: false }
+      - { name: body, label: Contenido, widget: markdown }
+
+  - name: servicios
+    label: Servicios
+    label_singular: Servicio
+    folder: src/content/servicios
+    create: true
+    slug: 'reparacion-{{slug}}'
+    fields:
+      - { name: title, label: Título visible, widget: string }
+      - { name: shortName, label: Nombre corto (menú), widget: string }
+      - { name: seoTitle, label: Título para Google (máx. 70), widget: string }
+      - { name: seoDescription, label: Descripción para Google (máx. 160), widget: text }
+      - { name: intro, label: Introducción, widget: text }
+      - { name: order, label: Orden, widget: number, value_type: int, default: 10 }
+      - { name: image, label: Imagen, widget: image, required: false }
+      - { name: problems, label: Fallas que se reparan, widget: list, field: { name: item, label: Falla, widget: string } }
+      - name: faqs
+        label: Preguntas frecuentes
+        widget: list
+        required: false
+        fields:
+          - { name: q, label: Pregunta, widget: string }
+          - { name: a, label: Respuesta, widget: text }
+      - { name: body, label: Texto de la página, widget: markdown }
+
+  - name: ajustes
+    label: Ajustes de la web
+    files:
+      - name: sitio
+        label: Datos del negocio, WhatsApp y formulario
+        file: src/content/settings/sitio.json
+        fields:
+          - { name: businessName, label: Nombre del negocio, widget: string }
+          - { name: legalName, label: Razón social, widget: string, required: false }
+          - { name: tagline, label: Frase principal, widget: string }
+          - { name: yearsExperience, label: Años de experiencia, widget: number, value_type: int }
+          - name: whatsapp
+            label: Botón de WhatsApp
+            widget: object
+            fields:
+              - { name: enabled, label: Mostrar botón, widget: boolean, default: true }
+              - { name: number, label: 'Número (598 + celular sin el 0, ej. 59897125160)', widget: string, pattern: ['^598\d{8}$', 'Formato 598 seguido de 8 dígitos'] }
+              - { name: message, label: Mensaje que aparece escrito, widget: text }
+              - { name: label, label: Texto del botón, widget: string }
+          - name: contactForm
+            label: Formulario de contacto
+            widget: object
+            fields:
+              - { name: provider, label: Servicio de envío, widget: select, options: [web3forms, cloudflare], hint: 'web3forms mientras la web está en GitHub Pages; cloudflare en el hosting definitivo' }
+              - { name: web3formsKey, label: Access key de Web3Forms, widget: string, hint: 'El mail de destino es el que registraste en web3forms.com con esta clave' }
+              - { name: recipient, label: Mail que recibe las consultas (modo cloudflare), widget: string }
+              - { name: subject, label: Asunto del mail, widget: string }
+              - { name: successMessage, label: Mensaje al enviar, widget: text }
+          - name: phones
+            label: Teléfonos
+            widget: list
+            fields:
+              - { name: label, label: Etiqueta, widget: string }
+              - { name: number, label: Número, widget: string }
+          - { name: email, label: Email público, widget: string }
+          - name: hours
+            label: Horario
+            widget: object
+            fields:
+              - { name: text, label: Texto visible, widget: string }
+              - { name: days, label: Días (en inglés, para Google), widget: select, multiple: true, options: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday] }
+              - { name: opens, label: Abre (HH:MM), widget: string }
+              - { name: closes, label: Cierra (HH:MM), widget: string }
+          - name: address
+            label: Dirección
+            widget: object
+            fields:
+              - { name: street, label: Calle y número, widget: string }
+              - { name: city, label: Ciudad, widget: string }
+              - { name: department, label: Departamento, widget: string }
+              - { name: postalCode, label: Código postal, widget: string, required: false }
+              - { name: lat, label: Latitud, widget: number, value_type: float, required: false }
+              - { name: lng, label: Longitud, widget: number, value_type: float, required: false }
+          - name: zones
+            label: Zonas de cobertura
+            widget: list
+            fields:
+              - { name: name, label: Zona, widget: string }
+              - { name: areas, label: Barrios / localidades, widget: list, field: { name: area, label: Barrio, widget: string } }
+          - { name: brands, label: Marcas, widget: list, field: { name: brand, label: Marca, widget: string } }
+          - name: analytics
+            label: Medición y publicidad
+            widget: object
+            fields:
+              - { name: ga4Id, label: 'ID de Google Analytics 4 (G-XXXX)', widget: string, required: false }
+              - { name: googleAdsId, label: 'ID de Google Ads (AW-XXXX)', widget: string, required: false }
+              - { name: metaPixelId, label: ID del píxel de Meta, widget: string, required: false }
+          - name: social
+            label: Redes
+            widget: object
+            fields:
+              - { name: facebook, label: Facebook, widget: string, required: false }
+              - { name: instagram, label: Instagram, widget: string, required: false }
+              - { name: googleBusiness, label: Ficha de Google Business, widget: string, required: false }
