@@ -117,3 +117,7 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 ## 2026-10-25 · Dirección corregida
 - La dirección es **Eduardo Pondal 704**, no 705 (lo confirmó el negocio). Corregida en `sitio.json` y `docs/seo-local.md`. Las entradas anteriores de este archivo quedan como estaban.
 - Ficha de Google: nombre, categorías, área de servicio (dirección oculta), áreas, teléfono y horario ya configurados por el dueño.
+- Ficha de Google completada por el dueño:
+  - Descripción del negocio y descripciones de los 3 servicios (los textos de la sesión de la Fase 4).
+  - Pagos: «Solo dinero en efectivo» en No. Google no tiene atributo para transferencia ni Mercado Pago; quedan en la descripción.
+- **Pendiente para la Fase 5:** cambiar el sitio web de la ficha al dominio nuevo y dar de alta Search Console.
