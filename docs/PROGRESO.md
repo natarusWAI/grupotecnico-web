@@ -82,3 +82,34 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Pendientes:**
   - En la Fase 5, con el dominio en Cloudflare Pages, revisar que `/admin` funcione en `grupotecnico.com.uy`. Si se usan las vistas previas `*.pages.dev`, sumarlas a `ALLOWED_DOMAINS`.
   - Las imágenes que se suban dentro del texto de un post apuntan a `/uploads/...` sin el prefijo `/grupotecnico-web`: en la vista previa de GitHub Pages no se ven, pero en el dominio final sí.
+
+## 2026-10-25 · Fase 4: SEO local
+- **Auditoría** (skill revision-seo, build de producción). Estaba bien: un `<h1>` por página, títulos y descripciones únicos, canonical sin `/repo`, robots/sitemap, links internos, imágenes con alt y medidas, JSON-LD por tipo de página. Se corrigió:
+  - Título de post > 70: el sufijo « | Grupo Técnico» solo se agrega si entra.
+  - `BlogPosting` sin `image`: ahora usa `og-default.png` si el post no tiene portada.
+  - `areaServed` del `Service` tenía nombres de grupo («Ruta 5 hasta…»). Ahora son las mismas localidades que el `LocalBusiness`.
+  - Las páginas noindex (404, gracias) ya no llevan canonical.
+  - `og-default.png` de 208 a 97 KB (PNG con paleta, también en `npm run fotos`).
+  - `_redirects`: las URLs viejas de WordPress también sin barra final.
+  - Fechas de los posts: salían un día antes por la zona horaria (se formatean en UTC).
+  - Botones de WhatsApp en verde oscuro `#0f7a3f`: blanco sobre `#25d366` tenía contraste 2:1 y Lighthouse bajaba Accesibilidad a 95 en los posts. El botón flotante sigue con el verde de WhatsApp.
+  - `docs/seo-local.md` tenía la dirección vieja; ahora dice Eduardo Pondal 705 y las zonas actuales.
+- **Posts nuevos** (calendario 1 a 4): «Mi lavarropas no centrifuga», «La heladera no enfría pero el freezer sí», «Códigos de error del lavarropas Samsung», «¿Conviene reparar o cambiar el lavarropas?». Entre 780 y 980 palabras, con links cruzados y a las páginas de servicio.
+  - El de reparar o cambiar no da precios del negocio: usa un ejemplo con $20.000 marcado como ilustrativo (no se encontraron precios uruguayos confiables en la web).
+  - Los cuatro tienen fecha de hoy. Para publicar uno cada 2 semanas, se pueden pasar a `draft: true` y liberarlos de a uno.
+  - Se agregaron estilos de `h3`, citas y tablas en `.prose-gt`.
+- **Lighthouse móvil:** 100 en Performance, Accesibilidad y SEO en la home, `/reparacion-lavarropas` y los posts nuevos. Para correrlo hace falta `CHROME_PATH` apuntando al Chromium de Playwright (`~/.cache/ms-playwright/chromium-1148/chrome-linux/chrome`).
+- **Checklist para el dueño:**
+  - Google Business Profile, ya:
+    - Cambiar el nombre a «Grupo Técnico» (hoy figura «Reparación Heladeras y Lavarropas»).
+    - Categoría principal «Servicio de reparación de electrodomésticos». Secundarias: reparación de lavarropas y de refrigeradores.
+    - Negocio de área de servicio. Ocultar la dirección si no se atiende público. Áreas: Montevideo, Ciudad de la Costa, Paso Carrasco, Las Piedras, La Paz, Barros Blancos.
+    - Teléfono principal 097 125 160 y horario igual a la web.
+    - Atributos: factura, Mercado Pago. Servicios con descripción: lavarropas, secarropas, heladeras.
+    - Fotos reales todos los meses. Link de reseña para mandar por WhatsApp después de cada trabajo; responder todas las reseñas.
+    - Una publicación por semana: puede ser el resumen de un post.
+  - Google Business Profile, en la Fase 5: cambiar el sitio web de la ficha al dominio nuevo cuando esté en Cloudflare Pages.
+  - Search Console, en la Fase 5 (hoy la vista previa es noindex):
+    - Propiedad de dominio `grupotecnico.com.uy` verificada por DNS TXT.
+    - Enviar `sitemap-index.xml` e inspeccionar la home, los 3 servicios y los posts nuevos.
+    - Revisar en «Páginas» que las URLs viejas de WordPress figuren como redirigidas y no como 404.
