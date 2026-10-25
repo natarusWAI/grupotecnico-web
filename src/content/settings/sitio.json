@@ -31,7 +31,7 @@
   },
   "contactForm": {
     "provider": "web3forms",
-    "web3formsKey": "REEMPLAZAR-CON-ACCESS-KEY-DE-WEB3FORMS",
+    "web3formsKey": "f7004711-ca0a-4256-b968-bdb0c11f74ed",
     "recipient": "contacto@grupotecnico.com.uy",
     "subject": "Nueva consulta desde la web",
     "successMessage": "¡Gracias! Recibimos tu consulta y te contactamos a la brevedad."

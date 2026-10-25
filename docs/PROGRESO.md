@@ -13,4 +13,4 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - Repo público `natarusWAI/grupotecnico-web`, Pages con GitHub Actions. Web de prueba (noindex): https://nataruswai.github.io/grupotecnico-web/
 - `public/admin/config.yml` apunta al repo real.
 - Node: Astro exige ≥ 22.23.4; se instaló Node 24 con nvm y quedó como default (con 22.23.3 fallan `check` y `build`).
-- **Pendiente (vos):** crear la clave de Web3Forms y pegarla en `sitio.json` → `contactForm.web3formsKey`.
+- Clave de Web3Forms cargada en `sitio.json` (las consultas llegan al mail configurado en la cuenta de Web3Forms, no al campo `recipient`).
