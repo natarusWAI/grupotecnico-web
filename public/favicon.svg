@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1254" height="1254" viewBox="0 0 1254 1254" role="img" aria-label="Isotipo vectorial de refrigerador y lavadora">
+  <title>Isotipo vectorial</title>
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00182f"/><stop offset="0.37" stop-color="#012246"/><stop offset="0.8" stop-color="#001a37"/><stop offset="1" stop-color="#001a35"/>
+    </linearGradient>
+    <linearGradient id="navyInner" x1="0" y1="0" x2="0.8" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#001c3b"/><stop offset="0.65" stop-color="#001f41"/><stop offset="1" stop-color="#001b38"/>
+    </linearGradient>
+    <linearGradient id="white" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.4" stop-color="#fdfcfc"/><stop offset="0.8" stop-color="#ffffff"/><stop offset="1" stop-color="#f5f7fa"/>
+    </linearGradient>
+    <linearGradient id="coolSteel" x1="0.1" y1="0" x2="0.98" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dce6f0"/><stop offset="0.6" stop-color="#e3eaf3"/><stop offset="1" stop-color="#d7e2ef"/>
+    </linearGradient>
+    <linearGradient id="coolSteel2" x1="0" y1="1" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dce6f2"/><stop offset="0.55" stop-color="#e0e8f2"/><stop offset="1" stop-color="#cbdbe9"/>
+    </linearGradient>
+    <linearGradient id="panelHighlight" x1="0.1" y1="0.2" x2="1" y2="0.6" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#fdfdfe"/><stop offset="1" stop-color="#f4f5f8"/>
+    </linearGradient>
+    <radialGradient id="ocean" cx="0.5" cy="0.47" r="0.62">
+      <stop offset="0" stop-color="#006fe9"/><stop offset="0.58" stop-color="#007eff"/><stop offset="1" stop-color="#00a3ff"/>
+    </radialGradient>
+    <linearGradient id="blueSwirl" x1="0.12" y1="0.1" x2="0.65" y2="0.95">
+      <stop offset="0" stop-color="#0068e7"/><stop offset="0.45" stop-color="#007fff"/><stop offset="1" stop-color="#06a6ff"/>
+    </linearGradient>
+    <linearGradient id="blueTail" x1="0" y1="0" x2="1" y2="0.7">
+      <stop offset="0" stop-color="#0090ff"/><stop offset="0.38" stop-color="#0084ff"/><stop offset="0.67" stop-color="#0094ff"/><stop offset="1" stop-color="#04afff"/>
+    </linearGradient>
+    <linearGradient id="deepBlue" x1="0" y1="0.7" x2="1" y2="0.1">
+      <stop offset="0" stop-color="#003271"/><stop offset="0.5" stop-color="#004d9f"/><stop offset="1" stop-color="#006ee0"/>
+    </linearGradient>
+    <radialGradient id="lensDark" cx="0.51" cy="0.59" r="0.9">
+      <stop offset="0" stop-color="#001832"/><stop offset="0.55" stop-color="#002449"/><stop offset="1" stop-color="#003b7b"/>
+    </radialGradient>
+    <linearGradient id="glassSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a4deff" stop-opacity="0.8"/><stop offset="0.52" stop-color="#e1f5ff" stop-opacity="0.26"/><stop offset="1" stop-color="#9ad5ff" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="ringWhite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.3" stop-color="#fff"/><stop offset="0.75" stop-color="#edf7ff"/><stop offset="1" stop-color="#d6e9fd"/>
+    </linearGradient>
+    <clipPath id="refrigeratorClip">
+      <rect x="183" y="205" width="519" height="869" rx="33"/>
+    </clipPath>
+    <clipPath id="machineClip">
+      <rect x="513" y="466" width="558" height="607" rx="30"/>
+    </clipPath>
+    <clipPath id="doorClip"><circle cx="777" cy="837" r="188"/></clipPath>
+    <clipPath id="irisClip"><path d="M 785,679 C 876,677 953,740 962,823 C 975,915 888,991 795,993 C 708,999 637,942 619,868 C 599,789 669,690 758,681 Q 771,679 785,679 Z"/></clipPath>
+  </defs>
+
+  <!-- Refrigerator housing and enamel door -->
+  <rect x="140" y="161" width="605" height="952" rx="81" fill="url(#navy)"/>
+  <rect x="183" y="205" width="519" height="869" rx="33" fill="url(#white)"/>
+  <g clip-path="url(#refrigeratorClip)">
+    <path d="M 668,205 L 702,205 L 702,603 L 401,603 C 427,545 443,506 475,449 C 517,376 568,315 668,205 Z" fill="url(#coolSteel)"/>
+    <path d="M 422,557 C 410,582 415,614 431,652 C 441,676 442,699 428,718 C 365,805 277,925 183,1051 L 183,1075 L 702,1075 L 702,557 Z" fill="url(#coolSteel2)"/>
+    <path d="M 182,1072 C 296,915 355,836 431,735" fill="none" stroke="#dfeaf6" stroke-width="8" opacity=".14"/>
+  </g>
+  <!-- Refrigerator horizontal split and handles -->
+  <rect x="182" y="559" width="305" height="37" fill="url(#navyInner)"/>
+  <rect x="223" y="290" width="50" height="223" rx="25" fill="url(#navyInner)"/>
+  <rect x="223" y="627" width="50" height="296" rx="25" fill="url(#navyInner)"/>
+
+  <!-- Washer enclosure -->
+  <path d="M 544,426 H 1037 C 1079,426 1112,459 1112,502 V 1037 C 1112,1079 1079,1113 1037,1113 H 541 C 500,1113 471,1078 471,1038 V 503 C 471,459 503,426 544,426 Z" fill="url(#navy)"/>
+  <rect x="513" y="466" width="558" height="607" rx="30" fill="url(#panelHighlight)"/>
+  <g clip-path="url(#machineClip)">
+    <path d="M 697,871 C 665,934 598,1026 541,1074 L 945,1074 L 1072,859 L 1072,1075 L 513,1075 Z" fill="url(#coolSteel)" opacity=".7"/>
+    <path d="M 1071,667 C 1042,708 1017,755 986,794 C 1034,731 1059,689 1071,672" fill="#d4e1ee" opacity="0.4"/>
+  </g>
+  <!-- Washer control deck and panel division -->
+  <path d="M 512,567 H 1071 V 598 H 512 Z" fill="url(#navyInner)"/>
+  <rect x="547" y="499" width="186" height="35" rx="18" fill="url(#navyInner)"/>
+  <circle cx="972" cy="517" r="40" fill="url(#navy)"/>
+  <circle cx="972" cy="517" r="13" fill="url(#white)"/>
+
+  <!-- Round porthole with white bezel -->
+  <circle cx="777" cy="837" r="225" fill="url(#navy)"/>
+  <circle cx="777" cy="837" r="188" fill="url(#ringWhite)"/>
+  <g clip-path="url(#doorClip)">
+    <path d="M 919,674 L 657,1011 L 702,1025 L 967,690 Z" fill="#b2dbff" opacity="0.13"/>
+    <path d="M 586,871 C 605,910 631,948 652,970 L 695,1023 L 674,1023 Z" fill="#a3d9ff" opacity="0.15"/>
+  </g>
+  <!-- Wash window, swirling blue water -->
+  <path d="M 785,679 C 876,677 953,740 962,823 C 975,915 888,991 795,993 C 708,999 637,942 619,868 C 599,789 669,690 758,681 Q 771,679 785,679 Z" fill="url(#ocean)"/>
+  <g clip-path="url(#irisClip)">
+    <path d="M 668,699 C 709,679 754,678 787,681 C 754,694 735,712 720,733 C 672,763 633,809 646,865 C 649,884 654,886 664,891 C 636,917 614,883 615,838 C 615,781 638,729 668,699 Z" fill="url(#deepBlue)"/>
+    <!-- Upper-left crescent of deep blue -->
+    <path d="M 736,696 C 751,705 754,726 740,735 C 721,748 697,753 674,787 C 655,816 643,859 662,885 C 666,890 665,893 650,892 C 630,891 619,873 617,845 C 611,792 648,728 693,709 C 715,698 726,690 736,696 Z" fill="url(#deepBlue)"/>
+    <!-- White reflected crescent -->
+    <path d="M 714,741 C 724,736 734,743 729,754 C 720,769 697,781 683,809 C 665,841 666,876 661,887 C 653,902 643,874 647,852 C 652,799 675,765 714,741 Z" fill="#ffffff"/>
+    <!-- Dim inner back wave -->
+    <path d="M 756,815 C 755,858 724,899 679,918 C 736,962 815,961 871,935 C 924,910 951,873 963,821 C 945,862 906,905 854,915 C 796,930 760,886 756,815 Z" fill="url(#deepBlue)"/>
+    <!-- Dark navy drum core -->
+    <path d="M 846,697 C 915,695 955,758 961,817 C 968,864 931,911 869,927 C 819,944 779,923 765,889 C 745,853 744,800 762,752 C 780,717 807,699 846,697 Z" fill="url(#lensDark)"/>
+    <!-- Reflected blue stroke across upper right -->
+    <path d="M 806,687 C 862,673 925,712 953,774 C 909,716 867,705 833,714 C 812,720 792,735 774,756 C 786,721 789,703 806,687 Z" fill="#087ce8" opacity="0.6"/>
+    <!-- Bright lower curling water -->
+    <path d="M 619,857 C 632,906 669,942 727,951 C 834,980 926,913 964,835 C 965,899 918,965 849,985 C 762,1017 663,973 626,906 C 617,889 610,873 619,857 Z" fill="url(#blueTail)"/>
+    <!-- Subtle translucent light streak -->
+    <path d="M 657,929 C 706,966 789,1005 845,979 C 880,958 896,956 891,977 C 828,1028 739,1011 674,971 Z" fill="#99dbff" opacity="0.33"/>
+    <path d="M 620,863 C 639,916 673,946 713,960 C 680,933 656,894 646,856 Z" fill="#58cdff" opacity="0.32"/>
+  </g>
+</svg>

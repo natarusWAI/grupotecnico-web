@@ -1,7 +1,7 @@
 // Convierte los originales de fotos/ (no se suben al repo) a .webp livianos en public/uploads,
 // y genera logo, favicons y la imagen para redes. Uso: npm run fotos
 import sharp from 'sharp';
-import { mkdir, stat } from 'node:fs/promises';
+import { copyFile, mkdir, stat } from 'node:fs/promises';
 
 const IN = 'fotos';
 const OUT = 'public/uploads';
@@ -38,10 +38,18 @@ const logo = await sharp(`${IN}/Logo completo.png`).trim({ threshold: 20 }).toBu
 const logoInfo = await sharp(logo).resize({ height: 80 }).webp({ quality: 90 }).toFile(`${OUT}/logo.webp`);
 console.log(`${OUT}/logo.webp  ${logoInfo.width}×${logoInfo.height}`);
 
-// Favicons desde el isotipo.
-const iso = await sharp(`${IN}/Isotipo sin fondo.png`).trim().toBuffer();
-await sharp(iso).resize(48, 48, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toFile('public/favicon.png');
-await sharp(`${IN}/isotipo fondo blanco.png`).resize(180, 180).png().toFile('public/apple-touch-icon.png');
+// Favicons desde el isotipo vectorial: el SVG para navegadores modernos y PNG de respaldo.
+const isoSvg = `${IN}/Isotipo vectorial.svg`;
+await copyFile(isoSvg, 'public/favicon.svg');
+const iso = await sharp(isoSvg, { density: 300 }).trim().toBuffer();
+const transparent = { r: 0, g: 0, b: 0, alpha: 0 };
+await sharp(iso).resize(48, 48, { fit: 'contain', background: transparent }).png().toFile('public/favicon.png');
+// iOS no respeta la transparencia: isotipo con margen sobre blanco.
+const touch = await sharp(iso).resize(150, 150, { fit: 'contain', background: '#ffffff' }).toBuffer();
+await sharp({ create: { width: 180, height: 180, channels: 3, background: '#ffffff' } })
+  .composite([{ input: touch, gravity: 'center' }])
+  .png()
+  .toFile('public/apple-touch-icon.png');
 
 // Imagen para compartir en redes (1200×630): logo centrado sobre blanco.
 const ogLogo = await sharp(logo).resize({ width: 1000 }).toBuffer();
@@ -50,6 +58,6 @@ await sharp({ create: { width: 1200, height: 630, channels: 3, background: '#fff
   .png()
   .toFile('public/og-default.png');
 
-for (const f of ['public/favicon.png', 'public/apple-touch-icon.png', 'public/og-default.png']) {
+for (const f of ['public/favicon.svg', 'public/favicon.png', 'public/apple-touch-icon.png', 'public/og-default.png']) {
   console.log(`${f}  ${Math.round((await stat(f)).size / 1024)} KB`);
 }

@@ -57,7 +57,8 @@ const ga = s.analytics.ga4Id || s.analytics.googleAdsId;
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {(noindex || preview) && <meta name="robots" content="noindex, nofollow" />}
-    <link rel="icon" href={url('/favicon.png')} type="image/png" />
+    <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
+    <link rel="icon" href={url('/favicon.png')} type="image/png" sizes="48x48" />
     <link rel="apple-touch-icon" href={url('/apple-touch-icon.png')} />
     <link rel="sitemap" href={url('/sitemap-index.xml')} />
     <link rel="alternate" type="application/rss+xml" title={`Blog de ${s.businessName}`} href={url('/rss.xml')} />
