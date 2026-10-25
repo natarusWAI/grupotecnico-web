@@ -44,3 +44,21 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Hero más compacto en celular:** menos padding, título 3xl, botones a ancho completo, para que el formulario quede más cerca.
 - **Franja `Confianza.astro`** debajo del hero: años de experiencia (desde `foundingYear`), garantía por escrito, factura electrónica y Mercado Pago, con íconos de trazo propios (sin logos de DGI ni de Mercado Pago). Reemplaza la lista de ✓ que había en el hero.
 - **Pendiente:** revisar en un celular real que el menú desplegable no quede tapado por el hero.
+
+## 2026-10-25 · Fase 2: landing que vende
+- **Celular:**
+  - Hero más compacto en móvil. WhatsApp y Llamar se ven sin scroll incluso en 360×640 (en 390×844 terminan en 491 px).
+  - La segunda fila del menú, con scroll de costado, se cambió por un menú desplegable sin JavaScript (`<details>`). «Contacto» ya no queda oculto.
+  - El botón de la cabecera dice «Llamar» en móvil y muestra el número desde `sm`.
+- **Años de experiencia:** `yearsExperience` se reemplazó por `foundingYear: 1986`. Los años se calculan al compilar con `yearsExperience()` de `src/lib/site.ts`. Se agregó `foundingDate` al schema LocalBusiness y el panel quedó sincronizado.
+- **Franja de confianza** (`Confianza.astro`, debajo del hero): años de experiencia, garantía por escrito, factura electrónica y Mercado Pago. Íconos de trazo propios, sin logos de DGI ni de Mercado Pago.
+- **Reseñas** (`Resenas.astro`, campo `reviews` en `sitio.json` y en el panel):
+  - La sección no se muestra mientras no haya reseñas.
+  - Sin schema `Review`: Google no muestra estrellas para reseñas publicadas por el propio negocio.
+  - Si `social.googleBusiness` tiene link, aparece «Ver todas las reseñas en Google».
+- **Favicon:** sale de `fotos/Isotipo vectorial.svg`. Se generan `favicon.svg`, un PNG de 48 px de respaldo y `apple-touch-icon` sobre blanco. `og-default.png` sigue con el logo completo.
+- **Lighthouse móvil** (home, build local): Performance 100, Accesibilidad 100, Buenas prácticas 100, SEO 100.
+- **Pendientes:**
+  - Cargar 5 a 8 reseñas reales. El link de búsqueda de Google no se puede leer desde afuera: hay que copiarlas a mano.
+  - Cargar el link de la ficha de Google Business en `social.googleBusiness`.
+  - Correcciones de texto que quiere hacer el negocio antes de seguir.
