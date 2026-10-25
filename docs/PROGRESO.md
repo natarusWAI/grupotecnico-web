@@ -8,3 +8,9 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - WhatsApp y formulario configurables desde `sitio.json` / panel.
 - **Pendiente de confirmar con el negocio:** número de WhatsApp (se puso 097 125 160), marcas reales (la lista es tentativa), qué repuestos tienen 1 o 2 años de garantía, barrios límite de cobertura (¿Barros Blancos, Pando ciudad, Las Piedras?), coordenadas exactas de Enrique Martínez 1631.
 - Conocido: en GitHub Pages las redirecciones de URLs viejas apuntan sin `/repo`; en el dominio final funcionan bien (y además se cubren con `public/_redirects`).
+
+## 2026-10-25 · Fase 0: proyecto en GitHub
+- Repo público `natarusWAI/grupotecnico-web`, Pages con GitHub Actions. Web de prueba (noindex): https://nataruswai.github.io/grupotecnico-web/
+- `public/admin/config.yml` apunta al repo real.
+- Node: Astro exige ≥ 22.23.4; se instaló Node 24 con nvm y quedó como default (con 22.23.3 fallan `check` y `build`).
+- **Pendiente (vos):** crear la clave de Web3Forms y pegarla en `sitio.json` → `contactForm.web3formsKey`.
