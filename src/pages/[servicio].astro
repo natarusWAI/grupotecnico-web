@@ -16,7 +16,7 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const s = await getSettings();
 const d = entry.data;
-const waMsg = `Hola Grupo Técnico, necesito reparar mi ${d.shortName.toLowerCase().replace(/s$/, '')}. `;
+const waMsg = `Hola Grupo Técnico, necesito reparar mi ${d.shortName.toLowerCase().replace(/(?<!ropa)s$/, '')}. `;
 const jsonLd = [
   {
     '@context': 'https://schema.org',

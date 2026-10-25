@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import { getSettings, url } from '../lib/site';
 const s = await getSettings();
 const f = s.contactForm;
-const servicios = await getCollection('servicios');
+const servicios = (await getCollection('servicios')).sort((a, b) => a.data.order - b.data.order);
 // web3forms: el mail de destino es el asociado al access key (se cambia en web3forms.com).
 // cloudflare: el destino es f.recipient, lo lee functions/api/contacto.ts.
 const action = f.provider === 'web3forms' ? 'https://api.web3forms.com/submit' : url('/api/contacto');
