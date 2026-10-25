@@ -6,7 +6,7 @@ Para un servicio a domicilio, lo que más clientes trae es aparecer en el **mapa
 - Crear o reclamar la ficha "Grupo Técnico". Categoría principal: **Servicio de reparación de electrodomésticos**. Secundarias: reparación de lavarropas, reparación de refrigeradores.
 - Como van a domicilio: configurarla como **negocio de área de servicio**. Si no atienden público en Eduardo Pondal 704, ocultar la dirección. Agregar áreas (máx. 20) según `coverage` de `sitio.json`: Montevideo, Ciudad de la Costa, Paso Carrasco, Las Piedras, La Paz, Barros Blancos. Pando ciudad no.
 - Nombre, dirección y teléfono (NAP) **idénticos** a la web (`sitio.json`).
-- Horario, atributos (factura, Mercado Pago), servicios con descripción, fotos reales (técnicos, camioneta, reparaciones) cada mes.
+- Horario, atributos de pago (no hay atributo de factura ni de Mercado Pago: van en la descripción y en los servicios), servicios con descripción, fotos reales (técnicos, camioneta, reparaciones) cada mes.
 - **Reseñas:** es el factor que más pesa. Mandar el link de reseña por WhatsApp después de cada trabajo. Responder todas.
 - Publicaciones semanales (pueden ser el mismo post del blog resumido).
 
