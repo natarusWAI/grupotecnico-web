@@ -113,3 +113,7 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
     - Propiedad de dominio `grupotecnico.com.uy` verificada por DNS TXT.
     - Enviar `sitemap-index.xml` e inspeccionar la home, los 3 servicios y los posts nuevos.
     - Revisar en «Páginas» que las URLs viejas de WordPress figuren como redirigidas y no como 404.
+
+## 2026-10-25 · Dirección corregida
+- La dirección es **Eduardo Pondal 704**, no 705 (lo confirmó el negocio). Corregida en `sitio.json` y `docs/seo-local.md`. Las entradas anteriores de este archivo quedan como estaban.
+- Ficha de Google: nombre, categorías, área de servicio (dirección oculta), áreas, teléfono y horario ya configurados por el dueño.
