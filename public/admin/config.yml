@@ -5,7 +5,7 @@ backend:
   name: github
   repo: natarusWAI/grupotecnico-web
   branch: main
-  base_url: https://sveltia-cms-auth.nataruswai-c32.workers.dev   # login con GitHub (ver docs/admin-cms.md)
+  base_url: https://sveltia-cms-auth.grupotecnico86.workers.dev   # login con GitHub (ver docs/admin-cms.md)
   commit_messages:
     create: 'contenido: crear {{collection}} "{{slug}}"'
     update: 'contenido: actualizar {{collection}} "{{slug}}"'

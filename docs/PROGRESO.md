@@ -121,3 +121,11 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - Descripción del negocio y descripciones de los 3 servicios (los textos de la sesión de la Fase 4).
   - Pagos: «Solo dinero en efectivo» en No. Google no tiene atributo para transferencia ni Mercado Pago; quedan en la descripción.
 - **Pendiente para la Fase 5:** cambiar el sitio web de la ficha al dominio nuevo y dar de alta Search Console.
+
+## 2026-10-25 · Cuentas nuevas del negocio
+- **Cloudflare:**
+  - Cuenta nueva a nombre de `grupotecnico86@gmail.com`. `nataruswai@gmail.com` quedó invitado como Super Administrator.
+  - El worker de login pasó a esa cuenta: https://sveltia-cms-auth.grupotecnico86.workers.dev, importado del mismo repo `natarusWAI/sveltia-cms-auth`.
+  - Los 3 valores están cargados como **Secret**. Se generó un client secret nuevo en la OAuth App.
+  - `base_url` de `public/admin/config.yml` actualizado.
+- **Pendiente:** borrar el worker de la cuenta vieja y el client secret original de la OAuth App cuando el login nuevo esté probado. Pasar Web3Forms al mail nuevo.
