@@ -19,7 +19,7 @@ faqs:
   - q: ¿Hacen carga de gas?
     a: Sí. Detectamos la pérdida, la reparamos y recargamos el gas refrigerante correcto para tu equipo.
   - q: ¿Qué garantía tiene la reparación?
-    a: Entre 1 y 2 años según el repuesto. Por ejemplo, un motocompresor tiene una garantía distinta a un termostato. Te lo detallamos en el presupuesto.
+    a: Depende del repuesto. Termostatos, resistencias y condensadores tienen 2 años; el resto de los repuestos, como el motocompresor o la plaqueta, tiene 1 año. Te lo dejamos por escrito.
   - q: ¿Venden repuestos?
     a: No vendemos repuestos sueltos. Hacemos la reparación completa con repuestos originales.
   - q: ¿Cómo puedo pagar?

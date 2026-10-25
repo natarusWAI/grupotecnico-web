@@ -6,7 +6,7 @@ const { compact = false } = Astro.props;
 ---
 <section aria-labelledby="zonas-title" class="container-x py-16">
   <h2 id="zonas-title" class="text-3xl font-extrabold text-brand-900">Zonas donde vamos en el día</h2>
-  <p class="mt-2 text-slate-600">Toda Montevideo, Ciudad de la Costa hasta el Peaje de Pando y por Ruta 5 hasta La Paz.</p>
+  <p class="mt-2 text-slate-600">{s.coverage}</p>
   <div class="mt-8 grid gap-6 md:grid-cols-3">
     {s.zones.map((z) => (
       <div class="rounded-2xl p-6 ring-1 ring-slate-200">

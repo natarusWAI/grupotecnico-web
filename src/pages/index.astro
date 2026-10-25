@@ -15,8 +15,9 @@ const mainPhone = s.phones.find((p) => p.label !== 'Fijo') ?? s.phones[0];
 const faqs = [
   { q: '¿La visita tiene costo?', a: 'No. La visita y el presupuesto son sin costo. Solo pagás si aprobás la reparación.' },
   { q: '¿Venden repuestos?', a: 'No. Somos un servicio técnico: hacemos la reparación completa con repuestos originales y garantía.' },
-  { q: '¿Hasta dónde van?', a: 'Toda Montevideo, Ciudad de la Costa hasta el Peaje de Pando y por Ruta 5 hasta La Paz.' },
-  { q: '¿Qué garantía tienen las reparaciones?', a: 'Entre 1 y 2 años según el repuesto, siempre por escrito.' },
+  { q: '¿Hasta dónde van?', a: s.coverage },
+  { q: '¿Se llevan el equipo para repararlo?', a: 'No. Reparamos en tu casa, en la misma visita: no retiramos equipos para arreglarlos en un taller.' },
+  { q: '¿Qué garantía tienen las reparaciones?', a: s.warranty.text },
   { q: '¿Cómo puedo pagar?', a: 'Con Mercado Pago, efectivo o transferencia. Emitimos factura electrónica.' },
 ];
 const faqLd = {
@@ -27,15 +28,15 @@ const faqLd = {
 ---
 <Base
   title="Reparación de lavarropas y heladeras en Montevideo | Grupo Técnico"
-  description="Service de lavarropas y heladeras a domicilio. Visita en el día y presupuesto sin costo, repuestos originales, 1 y 2 años de garantía. Montevideo y Ciudad de la Costa."
+  description="Service de lavarropas, secarropas y heladeras a domicilio. Visita en el día, presupuesto sin costo, repuestos originales y hasta 2 años de garantía."
   jsonLd={[faqLd]}
 >
   <section class="bg-gradient-to-br from-brand-900 to-brand-700 text-white">
     <div class="container-x grid items-center gap-10 py-16 md:grid-cols-2 md:py-24">
       <div>
         <p class="inline-block rounded-full bg-white/10 px-3 py-1 text-sm">Más de {s.yearsExperience} años en Montevideo</p>
-        <h1 class="mt-4 text-4xl leading-tight font-extrabold md:text-5xl">Reparamos tu lavarropas o heladera <span class="text-accent-500">hoy mismo</span>, en tu casa</h1>
-        <p class="mt-4 text-lg text-blue-100">Visita en el día y presupuesto sin costo. Repuestos originales y hasta 2 años de garantía.</p>
+        <h1 class="mt-4 text-4xl leading-tight font-extrabold md:text-5xl">Reparamos tu lavarropas, secarropas o heladera <span class="text-accent-500">hoy mismo</span>, en tu casa</h1>
+        <p class="mt-4 text-lg text-blue-100">Visita en el día y presupuesto sin costo. Reparamos en tu casa, con repuestos originales y hasta 2 años de garantía.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           {s.whatsapp.enabled && <a class="btn-whatsapp" href={whatsappLink(s.whatsapp.number, s.whatsapp.message)} target="_blank" rel="noopener">Coordinar por WhatsApp</a>}
           {mainPhone && <a class="btn-ghost" href={telLink(mainPhone.number)}>Llamar al {mainPhone.number}</a>}
@@ -73,7 +74,7 @@ const faqLd = {
   <section class="container-x py-16" aria-labelledby="como-title">
     <h2 id="como-title" class="text-3xl font-extrabold text-brand-900">Así de fácil</h2>
     <ol class="mt-8 grid gap-6 md:grid-cols-4">
-      {['Nos escribís por WhatsApp o llamás', 'Vamos a tu casa en el día', 'Presupuesto sin costo, sin compromiso', 'Reparamos con garantía y factura'].map((t, i) => (
+      {['Nos escribís por WhatsApp o llamás', 'Vamos a tu casa en el día', 'Presupuesto sin costo, sin compromiso', 'Reparamos en tu casa, con garantía y factura'].map((t, i) => (
         <li class="rounded-2xl p-6 ring-1 ring-slate-200"><span class="text-3xl font-extrabold text-brand-600">{i + 1}</span><p class="mt-2 font-medium">{t}</p></li>
       ))}
     </ol>

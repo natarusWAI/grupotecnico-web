@@ -51,7 +51,10 @@ const settings = defineCollection({
     }),
     phones: z.array(z.object({ label: z.string(), number: z.string() })),
     email: z.email(),
-    hours: z.object({ text: z.string(), days: z.array(z.string()), opens: z.string(), closes: z.string() }),
+    hours: z.object({
+      text: z.string(),
+      schedule: z.array(z.object({ days: z.array(z.string()), opens: z.string(), closes: z.string() })),
+    }),
     whatsapp: z.object({
       enabled: z.boolean(),
       number: z.string().regex(/^598\d{8}$/, 'Formato 598 + 8 dígitos, sin 0 inicial ni espacios'),
@@ -65,8 +68,10 @@ const settings = defineCollection({
       subject: z.string(),
       successMessage: z.string(),
     }),
+    coverage: z.string(),
     zones: z.array(z.object({ name: z.string(), areas: z.array(z.string()) })),
     brands: z.array(z.string()),
+    warranty: z.object({ text: z.string() }),
     analytics: z.object({ ga4Id: z.string().optional(), googleAdsId: z.string().optional(), metaPixelId: z.string().optional() }),
     social: z.object({ facebook: z.string().optional(), instagram: z.string().optional(), googleBusiness: z.string().optional() }),
   }),

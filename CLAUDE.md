@@ -13,7 +13,8 @@ Astro 7 (estático) + Tailwind 4 + Sveltia CMS en `/admin` (edita archivos en Gi
 - Links internos siempre con `url()` de `src/lib/site.ts` (en GitHub Pages hay BASE `/repo`).
 - Textos en español rioplatense de Uruguay, con voseo ("escribinos", "coordiná"). Moneda en `$` uruguayos. Teléfonos en formato local (`097 125 160`), WhatsApp como `598XXXXXXXX`.
 - Diferenciales que siempre deben estar visibles: visita en el día y presupuesto sin costo, repuestos originales, garantía de 1 y 2 años según repuesto, factura electrónica, Mercado Pago.
-- Zona: toda Montevideo, Ciudad de la Costa hasta el Peaje de Pando (km 33 Interbalnearia) y Ruta 5 hasta La Paz. No crear páginas por barrio con texto repetido (Google las trata como doorway pages).
+- Reparan en el domicilio del cliente: no retiran equipos para arreglarlos en taller.
+- Zona (texto en `sitio.json` → `coverage`): toda Montevideo, Ciudad de la Costa hasta el Peaje de Pando (km 33 Interbalnearia), Ruta 5 hasta Las Piedras y Ruta 8 hasta Barros Blancos. Pando ciudad no. No crear páginas por barrio con texto repetido (Google las trata como doorway pages).
 - Mantener las URLs viejas que ya rankean: `/reparacion-lavarropas`, `/reparacion-heladeras`.
 
 ## Cómo trabajamos

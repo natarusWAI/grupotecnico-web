@@ -40,7 +40,7 @@ const business = {
     addressCountry: 'UY',
   },
   geo: s.address.lat ? { '@type': 'GeoCoordinates', latitude: s.address.lat, longitude: s.address.lng } : undefined,
-  openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: s.hours.days, opens: s.hours.opens, closes: s.hours.closes }],
+  openingHoursSpecification: s.hours.schedule.map((h) => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: h.days, opens: h.opens, closes: h.closes })),
   areaServed: s.zones.flatMap((z) => z.areas).map((name) => ({ '@type': 'Place', name: `${name}, Uruguay` })),
   sameAs: Object.values(s.social).filter(Boolean),
 };

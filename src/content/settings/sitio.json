@@ -1,27 +1,53 @@
 {
   "businessName": "Grupo Técnico",
   "legalName": "",
-  "tagline": "Reparación de lavarropas y heladeras a domicilio en Montevideo y Ciudad de la Costa",
+  "tagline": "Reparación de lavarropas, secarropas y heladeras a domicilio en Montevideo y Canelones",
   "yearsExperience": 35,
   "address": {
-    "street": "Enrique Martínez 1631",
+    "street": "Eduardo Pondal 705",
     "city": "Montevideo",
     "department": "Montevideo",
-    "postalCode": "",
-    "lat": -34.8762,
-    "lng": -56.1644
+    "postalCode": "12900",
+    "lat": -34.8451,
+    "lng": -56.2101
   },
   "phones": [
-    { "label": "Fijo", "number": "2358 2250" },
-    { "label": "Celular", "number": "097 125 160" },
-    { "label": "Celular", "number": "097 498 778" }
+    {
+      "label": "Celular / WhatsApp",
+      "number": "097 125 160"
+    },
+    {
+      "label": "Fijo",
+      "number": "2304 5504"
+    },
+    {
+      "label": "Celular",
+      "number": "097 498 778"
+    }
   ],
   "email": "contacto@grupotecnico.com.uy",
   "hours": {
-    "text": "Lunes a sábado de 9:00 a 19:00",
-    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    "opens": "09:00",
-    "closes": "19:00"
+    "text": "Lunes a viernes de 8 a 17 h · Sábados de 8 a 13 h",
+    "schedule": [
+      {
+        "days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      {
+        "days": [
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ]
   },
   "whatsapp": {
     "enabled": true,
@@ -36,21 +62,92 @@
     "subject": "Nueva consulta desde la web",
     "successMessage": "¡Gracias! Recibimos tu consulta y te contactamos a la brevedad."
   },
+  "coverage": "Toda Montevideo, Ciudad de la Costa hasta el Peaje de Pando, por Ruta 5 hasta Las Piedras y por Ruta 8 hasta Barros Blancos.",
   "zones": [
     {
       "name": "Montevideo",
-      "areas": ["Carrasco", "Malvín", "Punta Gorda", "Buceo", "Pocitos", "Punta Carretas", "Parque Batlle", "La Blanqueada", "Unión", "Jacinto Vera", "Larrañaga", "Cordón", "Centro", "Ciudad Vieja", "Tres Cruces", "Prado", "Aguada", "Maroñas", "Flor de Maroñas", "Piedras Blancas", "Manga", "Colón", "Sayago", "Peñarol", "Cerro", "Belvedere"]
+      "areas": [
+        "Carrasco",
+        "Malvín",
+        "Punta Gorda",
+        "Buceo",
+        "Pocitos",
+        "Punta Carretas",
+        "Parque Batlle",
+        "La Blanqueada",
+        "Unión",
+        "Jacinto Vera",
+        "Larrañaga",
+        "Cordón",
+        "Centro",
+        "Ciudad Vieja",
+        "Tres Cruces",
+        "Prado",
+        "Aguada",
+        "Maroñas",
+        "Flor de Maroñas",
+        "Piedras Blancas",
+        "Manga",
+        "Colón",
+        "Sayago",
+        "Peñarol",
+        "Cerro",
+        "Belvedere"
+      ]
     },
     {
       "name": "Ciudad de la Costa (hasta el Peaje de Pando)",
-      "areas": ["Paso Carrasco", "Barra de Carrasco", "Shangrilá", "Lagomar", "Solymar", "Lomas de Solymar", "Colinas de Solymar", "El Pinar", "Médanos de Solymar", "Parque Carrasco"]
+      "areas": [
+        "Paso Carrasco",
+        "Barra de Carrasco",
+        "Shangrilá",
+        "Lagomar",
+        "Solymar",
+        "Lomas de Solymar",
+        "Colinas de Solymar",
+        "El Pinar",
+        "Médanos de Solymar",
+        "Parque Carrasco"
+      ]
     },
     {
-      "name": "Ruta 5 (hasta La Paz)",
-      "areas": ["Colón", "Lezica", "Abayubá", "La Paz"]
+      "name": "Ruta 5 hasta Las Piedras y Ruta 8 hasta Barros Blancos",
+      "areas": [
+        "Lezica",
+        "Abayubá",
+        "La Paz",
+        "Las Piedras",
+        "Barros Blancos"
+      ]
     }
   ],
-  "brands": ["Samsung", "LG", "Whirlpool", "Electrolux", "Drean", "Patrick", "James", "Midea", "Panavox", "Bosch", "Philco", "Enxuta"],
-  "analytics": { "ga4Id": "", "googleAdsId": "", "metaPixelId": "" },
-  "social": { "facebook": "", "instagram": "", "googleBusiness": "" }
+  "brands": [
+    "Samsung",
+    "LG",
+    "Whirlpool",
+    "Electrolux",
+    "Bosch",
+    "Ariston",
+    "Midea",
+    "James",
+    "Panavox",
+    "Enxuta",
+    "Smartlife",
+    "Xion",
+    "Dikler",
+    "Greenwind"
+  ],
+  "warranty": {
+    "text": "2 años en bombas, electroválvulas, condensadores, correas, termostatos y resistencias. 1 año en el resto de los repuestos. Siempre por escrito."
+  },
+  "analytics": {
+    "ga4Id": "",
+    "googleAdsId": "",
+    "metaPixelId": ""
+  },
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "googleBusiness": ""
+  }
 }

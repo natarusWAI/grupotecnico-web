@@ -100,9 +100,13 @@ collections:
             widget: object
             fields:
               - { name: text, label: Texto visible, widget: string }
-              - { name: days, label: Días (en inglés, para Google), widget: select, multiple: true, options: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday] }
-              - { name: opens, label: Abre (HH:MM), widget: string }
-              - { name: closes, label: Cierra (HH:MM), widget: string }
+              - name: schedule
+                label: Franjas horarias (para Google)
+                widget: list
+                fields:
+                  - { name: days, label: Días (en inglés), widget: select, multiple: true, options: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday] }
+                  - { name: opens, label: Abre (HH:MM), widget: string }
+                  - { name: closes, label: Cierra (HH:MM), widget: string }
           - name: address
             label: Dirección
             widget: object
@@ -113,6 +117,7 @@ collections:
               - { name: postalCode, label: Código postal, widget: string, required: false }
               - { name: lat, label: Latitud, widget: number, value_type: float, required: false }
               - { name: lng, label: Longitud, widget: number, value_type: float, required: false }
+          - { name: coverage, label: Resumen de la zona de cobertura (una frase), widget: text }
           - name: zones
             label: Zonas de cobertura
             widget: list
@@ -120,6 +125,11 @@ collections:
               - { name: name, label: Zona, widget: string }
               - { name: areas, label: Barrios / localidades, widget: list, field: { name: area, label: Barrio, widget: string } }
           - { name: brands, label: Marcas, widget: list, field: { name: brand, label: Marca, widget: string } }
+          - name: warranty
+            label: Garantía
+            widget: object
+            fields:
+              - { name: text, label: Qué garantía tiene cada repuesto, widget: text }
           - name: analytics
             label: Medición y publicidad
             widget: object

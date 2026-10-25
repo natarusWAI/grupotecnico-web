@@ -18,9 +18,9 @@ faqs:
   - q: ¿Cuánto cuesta la visita?
     a: La visita y el presupuesto no tienen costo. Solo pagás si aprobás la reparación.
   - q: ¿Vienen el mismo día?
-    a: Sí. Si nos escribís en horario de atención, coordinamos la visita en el día en Montevideo y Ciudad de la Costa hasta el Peaje de Pando.
+    a: Sí. Si nos escribís en horario de atención, coordinamos la visita en el día en Montevideo, Ciudad de la Costa hasta el Peaje de Pando, Ruta 5 hasta Las Piedras y Ruta 8 hasta Barros Blancos.
   - q: ¿Qué garantía tiene la reparación?
-    a: Entre 1 y 2 años según el repuesto que se cambie. Te lo detallamos en el presupuesto.
+    a: Bombas, electroválvulas, correas y resistencias tienen 2 años; el resto de los repuestos, 1 año. Te lo dejamos por escrito.
   - q: ¿Venden repuestos?
     a: No vendemos repuestos sueltos. Hacemos la reparación completa con repuestos originales.
   - q: ¿Cómo puedo pagar?
