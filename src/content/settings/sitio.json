@@ -12,7 +12,7 @@
   "contactForm": {
     "provider": "web3forms",
     "web3formsKey": "382558a5-8409-400c-bce1-124e549b11d7",
-    "recipient": "contacto@grupotecnico.com.uy",
+    "recipient": "grupotecnico86@gmail.com",
     "subject": "Nueva consulta desde la web",
     "successMessage": "¡Gracias! Recibimos tu consulta y te contactamos a la brevedad."
   },
@@ -30,7 +30,7 @@
       "number": "097 498 778"
     }
   ],
-  "email": "contacto@grupotecnico.com.uy",
+  "email": "grupotecnico86@gmail.com",
   "hours": {
     "text": "Lunes a viernes de 8 a 17 h · Sábados de 8 a 13 h",
     "schedule": [

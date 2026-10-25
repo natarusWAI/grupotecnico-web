@@ -131,3 +131,23 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - Login probado. Se borraron el worker de la cuenta vieja y el client secret original de la OAuth App.
 - **Web3Forms:** clave nueva creada con `grupotecnico86@gmail.com` y cargada en `sitio.json`. Las consultas llegan solo a ese mail, sin reenvío (decisión del negocio).
 - Prueba del formulario con la clave nueva: la consulta llegó a `grupotecnico86@gmail.com`.
+
+## 2026-10-25 · Fase 5: preparación de la migración a Cloudflare Pages
+- **DNS actual** (relevado con `dig`; el dominio y el cPanel los maneja un tercero, sin acceso nuestro):
+  - NS `ns1/ns2.mauricioc.com`. `A` de la raíz y `www` → `66.225.201.22` (WordPress en cPanel).
+  - MX `0 grupotecnico.com.uy` (mail en el mismo servidor), SPF con `+a +mx` y mailchannels, DKIM `default._domainkey`, DMARC `p=none`.
+- **Mail:** `contacto@grupotecnico.com.uy` no se usa, se usa `grupotecnico86@gmail.com`. No se migra el mail del cPanel.
+  - `email` y `contactForm.recipient` de `sitio.json` pasaron a `grupotecnico86@gmail.com` (pie, contacto, privacidad y schema).
+- **Formulario:** queda Web3Forms (decisión del negocio). No se usa Resend; `functions/api/contacto.ts` queda por si algún día se cambia a `cloudflare`.
+- **Dominio raíz:** Cloudflare Pages solo lo acepta si los nameservers pasan a Cloudflare, así que se va por la Opción B de `docs/hosting.md`.
+- **Redirecciones** (`public/_redirects`): se relevó el sitemap de WordPress y se sumaron `/service-title-1..4`, `/map`, `/equipo`, `/marcas`, `/elementor-page-builder`, `/tag/*`, `/author/*`, `/portfolio/*` y `/feed`. Los destinos llevan barra final para no encadenar el 301 con el 308 de Pages. Probado con `wrangler pages dev`.
+- **Revisión SEO con PREVIEW apagado** (build con `SITE=https://grupotecnico.com.uy`): sin fallas. Un `<h1>`, títulos ≤ 70 y descripciones ≤ 160 sin duplicados, canonical al dominio, robots con `Allow: /` y sitemap, JSON-LD válido, sin links internos rotos, imágenes < 200 KB.
+  - Ojo: en una terminal sin `nvm use 24` el build falla por Node 22.23.3.
+- **Pasos que faltan, en orden:**
+  1. Cloudflare (cuenta `grupotecnico86`) → Workers & Pages → Create → Pages → conectar `natarusWAI/grupotecnico-web`. Build `npm run build`, salida `dist`, variables `SITE=https://grupotecnico.com.uy`, `BASE=/`, `NODE_VERSION=24`. Revisar el sitio en `*.pages.dev`.
+  2. Cloudflare → Add a domain → `grupotecnico.com.uy` (plan Free). Borrar de la zona importada los registros del WordPress y del mail viejo. Agregar para que nadie mande mail falso con el dominio: MX nulo `0 .`, TXT `v=spf1 -all` y `_dmarc` `v=DMARC1; p=reject`.
+  3. Pages → Custom domains → `grupotecnico.com.uy` y `www.grupotecnico.com.uy` (redirigir `www` a la raíz con una regla de redirección).
+  4. Pedirle al tercero que cambie los nameservers del dominio en NIC.uy por los dos que da Cloudflare. Que no dé de baja el hosting hasta que la web nueva esté andando.
+  5. Probar `/admin` en el dominio (el worker ya tiene `grupotecnico.com.uy` en `ALLOWED_DOMAINS`) y el formulario.
+  6. Search Console (propiedad de dominio por TXT en Cloudflare), enviar `sitemap-index.xml`, inspeccionar home, servicios y posts. Cambiar el sitio web de la ficha de Google al dominio.
+  7. GitHub Pages queda como vista previa (noindex).
