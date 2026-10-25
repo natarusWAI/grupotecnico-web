@@ -51,6 +51,13 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - Sin schema `Review`: Google no muestra estrellas para reseñas publicadas por el propio negocio.
   - Si `social.googleBusiness` tiene link, aparece «Ver todas las reseñas en Google».
 - **Favicon:** sale de `fotos/Isotipo vectorial.svg`. Se generan `favicon.svg`, un PNG de 48 px de respaldo y `apple-touch-icon` sobre blanco. `og-default.png` sigue con el logo completo.
+- **Correcciones del negocio:**
+  - «Qué reparamos» ya no dice «te entregamos el equipo» (sonaba a que lo retiramos).
+  - En los pasos y en las FAQ, los pagos dicen «efectivo, transferencia o Mercado Pago».
+  - En heladeras se sacó «con dispensador» y se puso «Especialistas en heladeras inverter».
+- **Logos en la franja:**
+  - Mercado Pago lleva su isotipo de Simple Icons, en el color de la marca.
+  - DGI no lleva logo: el oficial (MEF-DGI) tiene el escudo nacional y puede sugerir respaldo del Estado. Se usa el texto «Factura electrónica DGI».
 - **Lighthouse móvil** (home, build local): Performance 100, Accesibilidad 100, Buenas prácticas 100, SEO 100.
 - **Pendientes:**
   - Cargar 5 a 8 reseñas reales. El link de búsqueda de Google no se puede leer desde afuera: hay que copiarlas a mano.
