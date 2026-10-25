@@ -35,7 +35,12 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Servicio nuevo:** `/reparacion-secarropas`.
 - **Pendientes:**
   - Las fotos son generadas con IA. Conviene reemplazarlas por fotos reales (técnico, camioneta) para la confianza y para Google Business Profile.
-  - En celular, el menú de la cabecera se desplaza de costado y «Contacto» queda oculto a la derecha. Revisarlo en la Fase 2.
 - **Resueltos:**
   - CP 12900 confirmado por el negocio (coincide con Google; OpenStreetMap figura con 11700).
   - Fotos de lavarropas y heladera regeneradas con remera lisa.
+
+## 2026-10-25 · Home en celular y franja de confianza
+- **Menú móvil:** la barra que se desplazaba de costado se reemplazó por un botón hamburguesa con `<details>` (sin JavaScript). El botón «Llamar» muestra el número solo desde `sm`.
+- **Hero más compacto en celular:** menos padding, título 3xl, botones a ancho completo, para que el formulario quede más cerca.
+- **Franja `Confianza.astro`** debajo del hero: años de experiencia (desde `foundingYear`), garantía por escrito, factura electrónica y Mercado Pago, con íconos de trazo propios (sin logos de DGI ni de Mercado Pago). Reemplaza la lista de ✓ que había en el hero.
+- **Pendiente:** revisar en un celular real que el menú desplegable no quede tapado por el hero.
