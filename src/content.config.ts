@@ -40,7 +40,7 @@ const settings = defineCollection({
     businessName: z.string(),
     legalName: z.string().optional(),
     tagline: z.string(),
-    yearsExperience: z.number(),
+    foundingYear: z.number().int(),
     address: z.object({
       street: z.string(),
       city: z.string(),

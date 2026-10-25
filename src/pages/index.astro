@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm.astro';
 import Diferenciales from '../components/Diferenciales.astro';
 import Faq from '../components/Faq.astro';
 import Zonas from '../components/Zonas.astro';
-import { getSettings, url, whatsappLink, telLink } from '../lib/site';
+import { getSettings, url, whatsappLink, telLink, yearsExperience } from '../lib/site';
 
 const s = await getSettings();
 const servicios = (await getCollection('servicios')).sort((a, b) => a.data.order - b.data.order);
@@ -45,7 +45,7 @@ const faqLd = {
     <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-900/95 via-brand-900/85 to-brand-700/70"></div>
     <div class="container-x grid items-center gap-10 py-16 md:grid-cols-2 md:py-24">
       <div>
-        <p class="inline-block rounded-full bg-white/10 px-3 py-1 text-sm">Más de {s.yearsExperience} años en Montevideo</p>
+        <p class="inline-block rounded-full bg-white/10 px-3 py-1 text-sm">Desde {s.foundingYear} en Montevideo: {yearsExperience(s.foundingYear)} años reparando</p>
         <h1 class="mt-4 text-4xl leading-tight font-extrabold md:text-5xl">Reparamos tu lavarropas, secarropas o heladera <span class="text-accent-500">hoy mismo</span>, en tu casa</h1>
         <p class="mt-4 text-lg text-blue-100">Visita en el día y presupuesto sin costo. Reparamos en tu casa, con repuestos originales y hasta 2 años de garantía.</p>
         <div class="mt-8 flex flex-wrap gap-3">

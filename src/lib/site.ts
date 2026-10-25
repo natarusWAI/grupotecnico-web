@@ -6,6 +6,11 @@ export async function getSettings() {
   return entry.data;
 }
 
+/** Años desde la fundación, calculados al publicar la web. */
+export function yearsExperience(foundingYear: number) {
+  return new Date().getFullYear() - foundingYear;
+}
+
 /** Ruta interna respetando BASE (necesario en GitHub Pages). */
 export function url(path = '/') {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');

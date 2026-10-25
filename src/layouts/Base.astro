@@ -29,6 +29,7 @@ const business = {
   image: ogImage.href,
   telephone: s.phones.map((p) => `+598 ${p.number.replace(/^0/, '')}`),
   email: s.email,
+  foundingDate: String(s.foundingYear),
   priceRange: '$$',
   paymentAccepted: 'Mercado Pago, efectivo, transferencia',
   address: {

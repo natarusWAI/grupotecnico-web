@@ -70,7 +70,7 @@ collections:
           - { name: businessName, label: Nombre del negocio, widget: string }
           - { name: legalName, label: Razón social, widget: string, required: false }
           - { name: tagline, label: Frase principal, widget: string }
-          - { name: yearsExperience, label: Años de experiencia, widget: number, value_type: int }
+          - { name: foundingYear, label: Año de fundación, hint: "Los años de experiencia se calculan solos a partir de este año.", widget: number, value_type: int }
           - name: whatsapp
             label: Botón de WhatsApp
             widget: object
