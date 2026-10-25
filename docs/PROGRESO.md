@@ -130,3 +130,4 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - `base_url` de `public/admin/config.yml` actualizado.
 - **Pendiente:** borrar el worker de la cuenta vieja y el client secret original de la OAuth App cuando el login nuevo esté probado. 
 - **Web3Forms:** clave nueva creada con `grupotecnico86@gmail.com` y cargada en `sitio.json`. Las consultas llegan a ese mail; para verlas también en `nataruswai@gmail.com`, configurar el reenvío en Gmail.
+- Prueba del formulario con la clave nueva: la consulta llegó a `grupotecnico86@gmail.com`.
