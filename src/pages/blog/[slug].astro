@@ -14,7 +14,7 @@ const d = post.data;
 // El sufijo con la marca solo si el título entero entra en 70 caracteres.
 const fullTitle = `${d.title} | ${s.businessName}`;
 const title = fullTitle.length <= 70 ? fullTitle : d.title;
-const fmt =new Intl.DateTimeFormat('es-UY', { dateStyle: 'long' });
+const fmt = new Intl.DateTimeFormat('es-UY', { dateStyle: 'long', timeZone: 'UTC' });
 const jsonLd = [{
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',

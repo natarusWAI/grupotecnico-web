@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { url } from '../../lib/site';
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => +b.data.date - +a.data.date);
-const fmt = new Intl.DateTimeFormat('es-UY', { dateStyle: 'long' });
+const fmt = new Intl.DateTimeFormat('es-UY', { dateStyle: 'long', timeZone: 'UTC' });
 ---
 <Base title="Blog: consejos para tu lavarropas y heladera | Grupo Técnico" description="Consejos de nuestros técnicos para cuidar, usar y detectar fallas en tu lavarropas y heladera.">
   <section class="container-x py-14">
