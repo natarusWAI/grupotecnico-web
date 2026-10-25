@@ -35,6 +35,7 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Servicio nuevo:** `/reparacion-secarropas`.
 - **Pendientes:**
   - Las fotos son generadas con IA. Conviene reemplazarlas por fotos reales (técnico, camioneta) para la confianza y para Google Business Profile.
-  - En las fotos de lavarropas y heladera, el técnico tiene una remera con el texto «SPIRIT».
-  - OpenStreetMap da CP 11700 (Sayago) para Eduardo Pondal 705. Se dejó 12900 como indicó el negocio; confirmar con Correo Uruguayo.
   - En celular, el menú de la cabecera se desplaza de costado y «Contacto» queda oculto a la derecha. Revisarlo en la Fase 2.
+- **Resueltos:**
+  - CP 12900 confirmado por el negocio (coincide con Google; OpenStreetMap figura con 11700).
+  - Fotos de lavarropas y heladera regeneradas con remera lisa.
