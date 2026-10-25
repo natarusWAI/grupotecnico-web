@@ -63,8 +63,10 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - Los nombres van con la inicial del apellido («Edith T.»), por privacidad (Ley 18.331).
   - Las reseñas no dicen barrio.
   - En la home se ven en una grilla de 4 columnas en escritorio.
+- **Ficha de Google:** `social.googleBusiness` = https://maps.app.goo.gl/tMXw8jHNCiqtEPNSA.
+  - Se usa en «Ver todas las reseñas en Google» y en `sameAs` del schema.
+  - En Google la ficha se llama «Reparación Heladeras y Lavarropas», no «Grupo Técnico». Revisar la consistencia del nombre en la Fase 4.
 - **Lighthouse móvil** (home, build local): Performance 100, Accesibilidad 100, Buenas prácticas 100, SEO 100.
 - **Pendientes:**
-  - Cargar el link público de la ficha en `social.googleBusiness`: el de Maps, desde «Compartir», tipo `maps.app.goo.gl/…`. El link `business.google.com/n/…` es el panel del dueño y no sirve.
   - Correcciones de texto que quiere hacer el negocio antes de seguir.
   - Probar en un celular real que el menú desplegable no quede tapado por el hero.
