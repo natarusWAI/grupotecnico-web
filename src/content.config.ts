@@ -72,6 +72,8 @@ const settings = defineCollection({
     zones: z.array(z.object({ name: z.string(), areas: z.array(z.string()) })),
     brands: z.array(z.string()),
     warranty: z.object({ text: z.string() }),
+    // Solo reseñas reales copiadas de Google: nunca inventar.
+    reviews: z.array(z.object({ name: z.string(), area: z.string().optional(), rating: z.number().int().min(1).max(5), text: z.string() })).default([]),
     analytics: z.object({ ga4Id: z.string().optional(), googleAdsId: z.string().optional(), metaPixelId: z.string().optional() }),
     social: z.object({ facebook: z.string().optional(), instagram: z.string().optional(), googleBusiness: z.string().optional() }),
   }),

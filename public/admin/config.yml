@@ -130,6 +130,16 @@ collections:
             widget: object
             fields:
               - { name: text, label: Qué garantía tiene cada repuesto, widget: text }
+          - name: reviews
+            label: Reseñas de Google
+            hint: 'Copiá reseñas reales de la ficha de Google, sin cambiarles el texto.'
+            widget: list
+            required: false
+            fields:
+              - { name: name, label: Nombre, widget: string }
+              - { name: area, label: Barrio o localidad, widget: string, required: false }
+              - { name: rating, label: Estrellas, widget: number, value_type: int, min: 1, max: 5, default: 5 }
+              - { name: text, label: Texto de la reseña, widget: text }
           - name: analytics
             label: Medición y publicidad
             widget: object
