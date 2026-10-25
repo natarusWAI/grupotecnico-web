@@ -6,3 +6,6 @@ dist/
 !.env.example
 .DS_Store
 .wrangler/
+
+# Originales de fotos (pesados); se optimizan con npm run fotos
+fotos/

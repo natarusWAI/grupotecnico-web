@@ -5,6 +5,7 @@ seoTitle: Reparación de lavarropas en Montevideo | Visita en el día
 seoDescription: Arreglamos tu lavarropas en tu casa. Visita en el día y presupuesto sin costo, repuestos originales y hasta 2 años de garantía. Montevideo y Ciudad de la Costa.
 intro: Arreglamos lavarropas de carga frontal y superior, de todas las marcas, en tu casa. Vamos en el día, te pasamos el presupuesto sin costo y usamos solo repuestos originales.
 order: 1
+image: /uploads/lavarropas-1200.webp
 problems:
   - No centrifuga o centrifuga mal
   - No arranca o no enciende

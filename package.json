@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "cms": "npx @sveltia/cms-proxy-server@latest"
+    "cms": "npx @sveltia/cms-proxy-server@latest",
+    "fotos": "node scripts/optimizar-fotos.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.4",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@astrojs/check": "latest",
     "@tailwindcss/vite": "^4.3.3",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.0"
   }

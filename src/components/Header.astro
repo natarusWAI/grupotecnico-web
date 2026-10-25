@@ -7,9 +7,8 @@ const mainPhone = s.phones.find((p) => p.label !== 'Fijo') ?? s.phones[0];
 ---
 <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
   <div class="container-x flex h-16 items-center justify-between gap-4">
-    <a href={url('/')} class="flex items-center gap-2 text-lg font-extrabold text-brand-900">
-      <img src={url('/favicon.svg')} alt="" width="32" height="32" />
-      {s.businessName}
+    <a href={url('/')} class="shrink-0">
+      <img src={url('/uploads/logo.webp')} alt={s.businessName} width="187" height="40" class="h-8 w-auto sm:h-10" />
     </a>
     <nav aria-label="Principal" class="hidden items-center gap-6 text-sm font-medium md:flex">
       {servicios.map((sv) => <a class="hover:text-brand-600" href={url(`/${sv.id}`)}>{sv.data.shortName}</a>)}

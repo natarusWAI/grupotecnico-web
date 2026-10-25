@@ -5,6 +5,7 @@ seoTitle: Reparación de heladeras en Montevideo | Visita en el día
 seoDescription: Service de heladeras con y sin frost en tu casa. Visita en el día, presupuesto sin costo, repuestos originales y hasta 2 años de garantía.
 intro: Reparamos heladeras de frío seco (no frost) y frío húmedo, freezers y heladeras con dispensador, de todas las marcas. Vamos en el día y el presupuesto es sin costo.
 order: 2
+image: /uploads/heladeras-1200.webp
 problems:
   - No enfría o enfría poco
   - El freezer congela pero la heladera no

@@ -31,7 +31,18 @@ const faqLd = {
   description="Service de lavarropas, secarropas y heladeras a domicilio. Visita en el día, presupuesto sin costo, repuestos originales y hasta 2 años de garantía."
   jsonLd={[faqLd]}
 >
-  <section class="bg-gradient-to-br from-brand-900 to-brand-700 text-white">
+  <section class="relative isolate overflow-hidden bg-brand-900 text-white">
+    <img
+      src={url('/uploads/hero-1920.webp')}
+      srcset={`${url('/uploads/hero-960.webp')} 960w, ${url('/uploads/hero-1920.webp')} 1920w`}
+      sizes="100vw"
+      width="1920"
+      height="1280"
+      alt=""
+      fetchpriority="high"
+      class="absolute inset-0 -z-10 h-full w-full object-cover"
+    />
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-900/95 via-brand-900/85 to-brand-700/70"></div>
     <div class="container-x grid items-center gap-10 py-16 md:grid-cols-2 md:py-24">
       <div>
         <p class="inline-block rounded-full bg-white/10 px-3 py-1 text-sm">Más de {s.yearsExperience} años en Montevideo</p>
@@ -55,15 +66,29 @@ const faqLd = {
   <section id="servicios" class="container-x py-16" aria-labelledby="serv-title">
     <h2 id="serv-title" class="text-3xl font-extrabold text-brand-900">Qué reparamos</h2>
     <p class="mt-2 text-slate-600">Somos servicio técnico: no vendemos repuestos sueltos, te entregamos el equipo funcionando y con garantía.</p>
-    <div class="mt-8 grid gap-6 md:grid-cols-2">
+    <div class="mt-8 grid gap-6 md:grid-cols-3">
       {servicios.map((sv) => (
-        <a href={url(`/${sv.id}`)} class="group rounded-2xl p-6 ring-1 ring-slate-200 transition hover:shadow-md hover:ring-brand-600">
-          <h3 class="text-xl font-bold text-brand-900 group-hover:text-brand-600">{sv.data.title}</h3>
-          <p class="mt-2 text-slate-600">{sv.data.intro}</p>
-          <ul class="mt-4 grid grid-cols-1 gap-1 text-sm text-slate-700 sm:grid-cols-2">
-            {sv.data.problems.slice(0, 6).map((p) => <li>• {p}</li>)}
-          </ul>
-          <span class="mt-4 inline-block font-semibold text-brand-600">Ver más →</span>
+        <a href={url(`/${sv.id}`)} class="group overflow-hidden rounded-2xl ring-1 ring-slate-200 transition hover:shadow-md hover:ring-brand-600">
+          {sv.data.image && (
+            <img
+              src={url(sv.data.image)}
+              srcset={sv.data.image.endsWith('-1200.webp') ? `${url(sv.data.image.replace('-1200.webp', '-600.webp'))} 600w, ${url(sv.data.image)} 1200w` : undefined}
+              sizes="(min-width: 768px) 33vw, 100vw"
+              width="1200"
+              height="800"
+              alt=""
+              loading="lazy"
+              class="aspect-[3/2] w-full object-cover"
+            />
+          )}
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-900 group-hover:text-brand-600">{sv.data.title}</h3>
+            <p class="mt-2 text-slate-600">{sv.data.intro}</p>
+            <ul class="mt-4 grid grid-cols-1 gap-1 text-sm text-slate-700">
+              {sv.data.problems.slice(0, 6).map((p) => <li>• {p}</li>)}
+            </ul>
+            <span class="mt-4 inline-block font-semibold text-brand-600">Ver más →</span>
+          </div>
         </a>
       ))}
     </div>
