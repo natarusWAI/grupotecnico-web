@@ -3,13 +3,18 @@
   "legalName": "",
   "tagline": "Reparación de lavarropas, secarropas y heladeras a domicilio en Montevideo y Canelones",
   "foundingYear": 1986,
-  "address": {
-    "street": "Eduardo Pondal 705",
-    "city": "Montevideo",
-    "department": "Montevideo",
-    "postalCode": "12900",
-    "lat": -34.8451,
-    "lng": -56.2101
+  "whatsapp": {
+    "enabled": true,
+    "number": "59897498778",
+    "message": "Hola Grupo Técnico, quiero coordinar una visita para reparar mi",
+    "label": "Escribinos por WhatsApp"
+  },
+  "contactForm": {
+    "provider": "web3forms",
+    "web3formsKey": "f7004711-ca0a-4256-b968-bdb0c11f74ed",
+    "recipient": "contacto@grupotecnico.com.uy",
+    "subject": "Nueva consulta desde la web",
+    "successMessage": "¡Gracias! Recibimos tu consulta y te contactamos a la brevedad."
   },
   "phones": [
     {
@@ -49,18 +54,13 @@
       }
     ]
   },
-  "whatsapp": {
-    "enabled": true,
-    "number": "59897125160",
-    "message": "Hola Grupo Técnico, quiero coordinar una visita para reparar mi ",
-    "label": "Escribinos por WhatsApp"
-  },
-  "contactForm": {
-    "provider": "web3forms",
-    "web3formsKey": "f7004711-ca0a-4256-b968-bdb0c11f74ed",
-    "recipient": "contacto@grupotecnico.com.uy",
-    "subject": "Nueva consulta desde la web",
-    "successMessage": "¡Gracias! Recibimos tu consulta y te contactamos a la brevedad."
+  "address": {
+    "street": "Eduardo Pondal 705",
+    "city": "Montevideo",
+    "department": "Montevideo",
+    "postalCode": "12900",
+    "lat": -34.8451,
+    "lng": -56.2101
   },
   "coverage": "Toda Montevideo, Ciudad de la Costa hasta el Peaje de Pando, por Ruta 5 hasta Las Piedras y por Ruta 8 hasta Barros Blancos.",
   "zones": [
@@ -143,41 +143,49 @@
   "reviews": [
     {
       "name": "Edith T.",
+      "area": "",
       "rating": 5,
       "text": "Me puse en contacto obteniendo respuesta inmediata , el trato muy agradable , todo excelente, gracias Gastón , recomiendo"
     },
     {
       "name": "Cacho R.",
+      "area": "",
       "rating": 5,
       "text": "Todo 10 puntos: el lavarropa quedó funcionando perfectamente. Trabajo responsable y excelente asesoramiento. Muy recomendable!"
     },
     {
       "name": "Nataly H.",
+      "area": "",
       "rating": 5,
       "text": "10 puntos! Rápido, cumplidor y en precio. Recomiendo!!"
     },
     {
       "name": "Juan A.",
+      "area": "",
       "rating": 5,
       "text": "Excelente atención y solucionado sin inconveniente, rápido y seguro"
     },
     {
       "name": "Giseela R.",
+      "area": "",
       "rating": 5,
       "text": "Excelente servicio, rápidos y buena atención."
     },
     {
       "name": "Marcelo M.",
+      "area": "",
       "rating": 5,
       "text": "Exelente altamente recomendable"
     },
     {
       "name": "Oscar M.",
+      "area": "",
       "rating": 5,
       "text": "Exelente servicio."
     },
     {
       "name": "Juan Pablo P.",
+      "area": "",
       "rating": 5,
       "text": "Buen profesional"
     }
