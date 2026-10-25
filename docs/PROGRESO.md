@@ -39,12 +39,6 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - CP 12900 confirmado por el negocio (coincide con Google; OpenStreetMap figura con 11700).
   - Fotos de lavarropas y heladera regeneradas con remera lisa.
 
-## 2026-10-25 · Home en celular y franja de confianza
-- **Menú móvil:** la barra que se desplazaba de costado se reemplazó por un botón hamburguesa con `<details>` (sin JavaScript). El botón «Llamar» muestra el número solo desde `sm`.
-- **Hero más compacto en celular:** menos padding, título 3xl, botones a ancho completo, para que el formulario quede más cerca.
-- **Franja `Confianza.astro`** debajo del hero: años de experiencia (desde `foundingYear`), garantía por escrito, factura electrónica y Mercado Pago, con íconos de trazo propios (sin logos de DGI ni de Mercado Pago). Reemplaza la lista de ✓ que había en el hero.
-- **Pendiente:** revisar en un celular real que el menú desplegable no quede tapado por el hero.
-
 ## 2026-10-25 · Fase 2: landing que vende
 - **Celular:**
   - Hero más compacto en móvil. WhatsApp y Llamar se ven sin scroll incluso en 360×640 (en 390×844 terminan en 491 px).
@@ -62,3 +56,4 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - Cargar 5 a 8 reseñas reales. El link de búsqueda de Google no se puede leer desde afuera: hay que copiarlas a mano.
   - Cargar el link de la ficha de Google Business en `social.googleBusiness`.
   - Correcciones de texto que quiere hacer el negocio antes de seguir.
+  - Probar en un celular real que el menú desplegable no quede tapado por el hero.
