@@ -65,7 +65,7 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - En la home se ven en una grilla de 4 columnas en escritorio.
 - **Ficha de Google:** `social.googleBusiness` = https://maps.app.goo.gl/tMXw8jHNCiqtEPNSA.
   - Se usa en «Ver todas las reseñas en Google» y en `sameAs` del schema.
-  - En Google la ficha se llama «Reparación Heladeras y Lavarropas», no «Grupo Técnico». Revisar la consistencia del nombre en la Fase 4.
+  - El nombre correcto es «Grupo Técnico» (lo confirmó el negocio). La ficha de Google figura como «Reparación Heladeras y Lavarropas»: el dueño tiene que cambiarla desde el panel de Google Business («Editar perfil» → «Nombre de la empresa»).
 - **Lighthouse móvil** (home, build local): Performance 100, Accesibilidad 100, Buenas prácticas 100, SEO 100.
 - **Pendientes:**
   - Correcciones de texto que quiere hacer el negocio antes de seguir.
