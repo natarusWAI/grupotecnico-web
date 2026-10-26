@@ -165,3 +165,13 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 ## 2026-10-26 · Nameservers cambiados en NIC.uy
 - Con las credenciales recuperadas se cambiaron los nameservers en NIC.uy a `lamar.ns.cloudflare.com` y `maria.ns.cloudflare.com`. NIC.uy confirmó el cambio.
 - Al guardar, los servidores de `com.uy` todavía delegaban a `mauricioc.com`: NIC.uy publica la zona cada cierto tiempo. Siguen los pasos de «Para retomar» de la entrada anterior.
+- 18:31: `com.uy` pasó a delegar a Cloudflare y la zona quedó activa (con «Check nameservers now»).
+- Pages → Custom domains: `grupotecnico.com.uy` y `www.grupotecnico.com.uy` activos, con CNAME a `grupotecnico-web.pages.dev` creado por Pages y certificado hasta enero de 2027.
+- Regla de redirección «www a la raíz» (template de Cloudflare, 301, conserva ruta y query). El aviso de «DNS no proxied» se ignoró: el CNAME de `www` ya está proxied.
+- Probado contra Cloudflare:
+  - Home, `/admin`, `robots.txt` y sitemap responden 200. Canonical al dominio, sin noindex.
+  - Las URLs viejas, `/feed` y `/service-title-1` redirigen bien. `www` y `http` van con 301 a `https://grupotecnico.com.uy`.
+- **Falta:**
+  - Probar el login de `/admin` y el formulario en el dominio.
+  - Search Console y el sitio web de la ficha de Google.
+  - Recién después, avisarle al tercero que puede dar de baja el hosting.
