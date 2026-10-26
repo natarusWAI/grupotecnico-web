@@ -161,3 +161,7 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   1. El tercero cambia los nameservers en NIC.uy a `lamar.ns.cloudflare.com` y `maria.ns.cloudflare.com` (y saca los de mauricioc.com). No da de baja el hosting todavía.
   2. Cuando la zona figure activa (llega un mail a grupotecnico86), agregar enseguida en Pages → Custom domains `grupotecnico.com.uy` y `www.grupotecnico.com.uy`. Hasta ese momento la web queda caída unos minutos.
   3. Verificar el dominio en vivo, `www` → raíz, `/admin` y el formulario. Después: Search Console y el sitio web de la ficha de Google.
+
+## 2026-10-26 · Nameservers cambiados en NIC.uy
+- Con las credenciales recuperadas se cambiaron los nameservers en NIC.uy a `lamar.ns.cloudflare.com` y `maria.ns.cloudflare.com`. NIC.uy confirmó el cambio.
+- Al guardar, los servidores de `com.uy` todavía delegaban a `mauricioc.com`: NIC.uy publica la zona cada cierto tiempo. Siguen los pasos de «Para retomar» de la entrada anterior.
