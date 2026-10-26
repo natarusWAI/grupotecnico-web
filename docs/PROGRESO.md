@@ -156,3 +156,8 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - Zona `grupotecnico.com.uy` creada en plan Free. Se borraron los 16 registros del cPanel y quedaron MX nulo, `v=spf1 -all` y DMARC `p=reject`.
   - Bot Preference Sync apagado para que no modifique el `robots.txt`.
   - Nameservers asignados: `lamar.ns.cloudflare.com` y `maria.ns.cloudflare.com`. El dominio no tiene DNSSEC.
+- **En pausa:** el tercero perdió las credenciales de NIC.uy y está tratando de recuperarlas. Pages no deja agregar el dominio hasta que la zona esté activa.
+- **Para retomar:**
+  1. El tercero cambia los nameservers en NIC.uy a `lamar.ns.cloudflare.com` y `maria.ns.cloudflare.com` (y saca los de mauricioc.com). No da de baja el hosting todavía.
+  2. Cuando la zona figure activa (llega un mail a grupotecnico86), agregar enseguida en Pages → Custom domains `grupotecnico.com.uy` y `www.grupotecnico.com.uy`. Hasta ese momento la web queda caída unos minutos.
+  3. Verificar el dominio en vivo, `www` → raíz, `/admin` y el formulario. Después: Search Console y el sitio web de la ficha de Google.
