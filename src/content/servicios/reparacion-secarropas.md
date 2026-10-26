@@ -4,7 +4,7 @@ shortName: Secarropas
 seoTitle: Reparación de secarropas en Montevideo | Visita en el día
 seoDescription: Arreglamos tu secarropas en tu casa. Visita en el día, presupuesto sin costo, repuestos originales y hasta 2 años de garantía. Montevideo y Canelones.
 intro: Reparamos secarropas de calor y de bomba de calor, de todas las marcas, en tu casa. Vamos en el día, el presupuesto es sin costo y no nos llevamos el equipo.
-order: 3
+order: 2
 image: /uploads/secarropas-1200.webp
 problems:
   - No calienta o seca muy poco
