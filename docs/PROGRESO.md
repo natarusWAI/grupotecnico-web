@@ -151,3 +151,8 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   5. Probar `/admin` en el dominio (el worker ya tiene `grupotecnico.com.uy` en `ALLOWED_DOMAINS`) y el formulario.
   6. Search Console (propiedad de dominio por TXT en Cloudflare), enviar `sitemap-index.xml`, inspeccionar home, servicios y posts. Cambiar el sitio web de la ficha de Google al dominio.
   7. GitHub Pages queda como vista previa (noindex).
+- **Avance en Cloudflare (cuenta `grupotecnico86`):**
+  - Proyecto de Pages `grupotecnico-web` andando en https://grupotecnico-web.pages.dev. Canonical, robots, redirecciones y formulario revisados en vivo.
+  - Zona `grupotecnico.com.uy` creada en plan Free. Se borraron los 16 registros del cPanel y quedaron MX nulo, `v=spf1 -all` y DMARC `p=reject`.
+  - Bot Preference Sync apagado para que no modifique el `robots.txt`.
+  - Nameservers asignados: `lamar.ns.cloudflare.com` y `maria.ns.cloudflare.com`. El dominio no tiene DNSSEC.
