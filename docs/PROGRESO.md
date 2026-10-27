@@ -201,3 +201,22 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   2. Cambiar el sitio web de la ficha de Google a `https://grupotecnico.com.uy/`.
   3. En un par de días, avisarle al tercero que puede dar de baja el WordPress y la zona de `mauricioc.com`.
   4. Fase 6: IDs de GA4 (y Google Ads / Meta si hay publicidad).
+
+## 2026-10-27 · Fase 6: medición
+- **GA4:** `ga4Id` = `G-DKR1MZTC1D` en `sitio.json`. Es la propiedad «GA4 - Grupo Técnico» (251611296), flujo web «Flujo 1» con `https://grupotecnico.com.uy`: la misma que usaba el WordPress, así que se conserva el historial.
+- **Google Ads:** cuenta 546-504-1046. No se cargó `googleAdsId` (`AW-…`): las conversiones se importan desde GA4 vinculando las cuentas (ver abajo). Si más adelante se quiere remarketing o la etiqueta propia de Ads, cargar el `AW-…` en el panel.
+- **Píxel de Meta:** no se activa, el negocio no tiene Facebook ni Instagram. El código ya manda `Contact` y `Lead` a `fbq` si algún día se carga.
+- **Cambios:**
+  - La vista previa de GitHub Pages (`PREVIEW=true`) no carga gtag, para no mezclar visitas de prueba con las reales.
+  - Se sacó `generate_lead` de `/gracias`: el formulario se envía por `fetch` sin salir de la página, así que a `/gracias` solo se llegaba entrando directo y contaba consultas falsas.
+  - **Bug corregido:** el script de `ContactForm.astro` se repite por cada formulario de la página y enganchaba otra vez los ya enganchados. En la home (2 formularios), el de arriba mandaba **cada consulta dos veces** a Web3Forms (dos mails) y dos `generate_lead`. Puede explicar el rechazo del antispam en la prueba del 2026-10-26. Ahora cada formulario se engancha una sola vez (`data-bound`).
+- **Verificación** (Chromium con Playwright contra el build de producción, WhatsApp y Web3Forms simulados): llegan a GA4 `page_view`, `whatsapp_click`, `phone_click` y un solo `generate_lead`, y Web3Forms recibe un solo envío. Esos eventos de prueba quedaron en la propiedad real (son pocos, no afectan).
+- **Para el dueño, en GA4** (Administrar → Visualización de datos → Eventos), cuando los eventos aparezcan en la lista (hasta 24 h después de la primera visita real):
+  1. Marcar como **evento clave** (la estrella) `whatsapp_click`, `phone_click` y `generate_lead`.
+  2. Opcional: Administrar → Definiciones personalizadas → crear la dimensión de evento `method` para ver en los informes si el lead vino del formulario.
+  3. Para probar en vivo: Administrar → DebugView, abriendo la web con https://tagassistant.google.com.
+- **Para el dueño, en Google Ads:**
+  1. GA4 → Administrar → Vinculación de productos → Vínculos de Google Ads → vincular la cuenta 546-504-1046 (con la misma cuenta de Google que administra las dos).
+  2. Google Ads → Objetivos → Conversiones → Nueva acción de conversión → Importar → Propiedades de Google Analytics 4 → Web → elegir los 3 eventos clave.
+  3. Dejar `generate_lead` y `whatsapp_click` como conversión **principal** y `phone_click` como **secundaria** (el clic en «Llamar» no garantiza que la llamada se haga). Recuento: «Una» por clic.
+- **Pendiente:** la Fase 7 (publicidad) arranca cuando GA4 muestre los eventos clave con visitas reales.

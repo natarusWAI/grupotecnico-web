@@ -45,7 +45,9 @@ const input = 'mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:bo
 </form>
 
 <script is:inline define:vars={{ successMessage: f.successMessage }}>
-  document.querySelectorAll('form[data-contact-form]').forEach((form) => {
+  // Este script se repite por cada formulario de la página: cada form se engancha una sola vez.
+  document.querySelectorAll('form[data-contact-form]:not([data-bound])').forEach((form) => {
+    form.dataset.bound = '';
     const status = form.querySelector('[data-form-status]');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();

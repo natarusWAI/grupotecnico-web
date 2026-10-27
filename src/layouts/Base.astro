@@ -48,7 +48,8 @@ const business = {
 };
 // PREVIEW=true en GitHub Pages: la vista previa no se indexa.
 const preview = process.env.PREVIEW === 'true';
-const ga = s.analytics.ga4Id || s.analytics.googleAdsId;
+// La vista previa no mide, para no mezclar visitas de prueba con las reales.
+const ga = !preview && (s.analytics.ga4Id || s.analytics.googleAdsId);
 ---
 <!doctype html>
 <html lang="es-UY">
