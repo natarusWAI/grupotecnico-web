@@ -74,4 +74,4 @@ leyendo metaPixelId de sitio.json.
 
 ## Fase 7 · Publicidad
 
-Ver `docs/publicidad-uruguay.md`. Arrancar recién cuando la Fase 6 mida bien.
+Ver `docs/publicidad-uruguay.md` y la campaña lista para cargar en `docs/ads/`. Arrancar recién cuando la Fase 6 mida bien.

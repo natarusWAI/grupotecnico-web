@@ -220,3 +220,14 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   2. Google Ads → Objetivos → Conversiones → Nueva acción de conversión → Importar → Propiedades de Google Analytics 4 → Web → elegir los 3 eventos clave.
   3. Dejar `generate_lead` y `whatsapp_click` como conversión **principal** y `phone_click` como **secundaria** (el clic en «Llamar» no garantiza que la llamada se haga). Recuento: «Una» por clic.
 - **Pendiente:** la Fase 7 (publicidad) arranca cuando GA4 muestre los eventos clave con visitas reales.
+
+## 2026-10-27 · Fase 7: campaña de Google Ads preparada
+- Sitio web de la ficha de Google cambiado a `https://grupotecnico.com.uy/` (lo hizo el dueño).
+- **Decisiones del negocio:** US$ 300 por mes, sobre todo en lavarropas y heladeras (secarropas es de nicho). Las campañas viejas de la cuenta 546-504-1046 se pausan y se arranca de cero.
+- **`docs/ads/`:** 4 CSV para Google Ads Editor (campañas en pausa, 80 palabras clave, 43 negativas por campaña, 1 anuncio adaptable por grupo) y `README.md` con el paso a paso: limpiar la cuenta, importar, ubicaciones, horario, recursos, checklist antes de activar y rutina.
+  - 2 campañas: «Lavarropas y secarropas» US$ 5,40/día (secarropas como grupo, sin presupuesto propio) y «Heladeras» US$ 4,40/día. En verano se invierten.
+  - Largos de títulos (≤ 30) y descripciones (≤ 90) verificados con un script.
+  - Horario de anuncios igual al de atención (L-V 8-17, sáb 8-13). Pando excluido.
+- **`docs/publicidad-uruguay.md` corregido:** tenía Drean entre las marcas, horario 8:30-18:30, faltaban Las Piedras, Barros Blancos y secarropas, y una sección de Meta que no aplica.
+- **A confirmar con el negocio:** si reparan Drean, Patrick o Philco (hoy no están en las palabras clave) y si hacen carga de gas en heladeras (está como palabra clave).
+- **Pendiente:** importar con Ads Editor y activar cuando estén los eventos clave (ver recordatorio de conversiones).
