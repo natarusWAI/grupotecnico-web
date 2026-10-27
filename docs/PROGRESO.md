@@ -172,7 +172,7 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - Home, `/admin`, `robots.txt` y sitemap responden 200. Canonical al dominio, sin noindex.
   - Las URLs viejas, `/feed` y `/service-title-1` redirigen bien. `www` y `http` van con 301 a `https://grupotecnico.com.uy`.
 - **Falta:**
-  - Probar el login de `/admin` y el formulario en el dominio.
+  - ~~Probar el login de `/admin` y el formulario en el dominio~~: los dos andan (2026-10-26).
   - Search Console y el sitio web de la ficha de Google.
   - Recién después, avisarle al tercero que puede dar de baja el hosting.
 
@@ -184,3 +184,9 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - El pie sigue con el nombre en texto: el logo azul marino no se lee sobre el fondo `brand-900`. Favicon y apple-touch-icon siguen saliendo del isotipo vectorial.
 - Pie: el nombre en texto pasó a ser el logo dentro de una tarjeta blanca (el negocio pasó una versión con fondo blanco). Se reusa `logo.webp` sobre fondo blanco, que da el mismo resultado sin otro archivo para descargar.
 - Formulario probado en el dominio: llega a `grupotecnico86@gmail.com`. Un envío de prueba con datos de relleno («aca va el telefono») repetido varias veces lo rechazó el antispam de Web3Forms con 400 «Could not submit this form for security reasons»; con datos realistas anda.
+- Login de `/admin` probado en el dominio: anda.
+- **Para retomar (2026-10-27):**
+  1. Search Console: propiedad de dominio, TXT en Cloudflare → DNS, enviar `sitemap-index.xml` e inspeccionar la home, los servicios y los posts.
+  2. Cambiar el sitio web de la ficha de Google a `https://grupotecnico.com.uy/`.
+  3. En un par de días, avisarle al tercero que puede dar de baja el WordPress y la zona de `mauricioc.com`.
+  4. Fase 6: IDs de GA4 (y Google Ads / Meta si hay publicidad).
