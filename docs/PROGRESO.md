@@ -229,5 +229,5 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - Largos de títulos (≤ 30) y descripciones (≤ 90) verificados con un script.
   - Horario de anuncios igual al de atención (L-V 8-17, sáb 8-13). Pando excluido.
 - **`docs/publicidad-uruguay.md` corregido:** tenía Drean entre las marcas, horario 8:30-18:30, faltaban Las Piedras, Barros Blancos y secarropas, y una sección de Meta que no aplica.
-- **A confirmar con el negocio:** si reparan Drean, Patrick o Philco (hoy no están en las palabras clave) y si hacen carga de gas en heladeras (está como palabra clave).
+- **Confirmado por el negocio:** no reparan Drean, Patrick ni Philco, y no hacen carga de gas en heladeras. Las cuatro van como negativas, se sacó la palabra clave «carga de gas heladera» y se sacó la FAQ «¿Hacen carga de gas?» de `/reparacion-heladeras`, que decía que sí.
 - **Pendiente:** importar con Ads Editor y activar cuando estén los eventos clave (ver recordatorio de conversiones).

@@ -17,8 +17,6 @@ problems:
 faqs:
   - q: ¿Cuánto cuesta la visita?
     a: La visita y el presupuesto no tienen costo. Solo pagás si aprobás la reparación.
-  - q: ¿Hacen carga de gas?
-    a: Sí. Detectamos la pérdida, la reparamos y recargamos el gas refrigerante correcto para tu equipo.
   - q: ¿Qué garantía tiene la reparación?
     a: Depende del repuesto. Termostatos, resistencias y condensadores tienen 2 años; el resto de los repuestos, como el motocompresor o la plaqueta, tiene 1 año. Te lo dejamos por escrito.
   - q: ¿Venden repuestos?

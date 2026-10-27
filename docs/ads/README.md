@@ -79,7 +79,8 @@ Los enlaces a sitios llevan el dominio completo (`https://grupotecnico.com.uy/..
 
 ## Decisiones
 
-- **Sin Drean, Patrick ni Philco** en palabras clave ni textos: se sacaron de las marcas de la web. Si se reparan igual, agregarlas.
+- **Drean, Patrick y Philco** van como negativas: no se reparan (confirmado por el negocio).
+- **«Carga de gas»** va como negativa: no se hace (confirmado por el negocio).
 - **«Repuestos», «venta», «comprar»** van como negativas: el negocio no vende repuestos.
 - **Nunca decir «service oficial»** de una marca: no lo son, y Google puede rechazar el anuncio.
 - Los 3 títulos que nombran el servicio van **fijados en la posición 1**, para que el anuncio siempre diga qué se repara. Los demás rotan.
