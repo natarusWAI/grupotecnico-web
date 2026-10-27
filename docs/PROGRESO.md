@@ -183,3 +183,4 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - Nuevo `public/logo.png` (600 px) y campo `logo` en el JSON-LD de `LocalBusiness`.
 - El pie sigue con el nombre en texto: el logo azul marino no se lee sobre el fondo `brand-900`. Favicon y apple-touch-icon siguen saliendo del isotipo vectorial.
 - Pie: el nombre en texto pasó a ser el logo dentro de una tarjeta blanca (el negocio pasó una versión con fondo blanco). Se reusa `logo.webp` sobre fondo blanco, que da el mismo resultado sin otro archivo para descargar.
+- Formulario probado en el dominio: llega a `grupotecnico86@gmail.com`. Un envío de prueba con datos de relleno («aca va el telefono») repetido varias veces lo rechazó el antispam de Web3Forms con 400 «Could not submit this form for security reasons»; con datos realistas anda.
