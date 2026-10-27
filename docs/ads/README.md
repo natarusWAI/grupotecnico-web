@@ -35,6 +35,13 @@ Archivos para cargar con **Google Ads Editor** (programa gratis de Google). Las 
 3. En cada importación Editor muestra qué columna corresponde a qué campo. Si alguna figura sin asignar, elegila a mano (`Criterion Type` = tipo de concordancia; `Headline 1 position` = fijar el título en una posición).
 4. Revisá los cambios (aparecen en la columna «Cambios pendientes») y tocá **Publicar**.
 
+Detalles que aparecieron en la primera carga (2026-10-27):
+- «Importar → Del archivo» queda gris hasta aceptar el aviso de novedades de la cuenta («Mostrar novedades de la cuenta»).
+- Los CSV van con BOM UTF-8: sin eso Editor lee mal los acentos («BÃºsqueda»).
+- Hay que elegir **«No, no tiene anuncios políticos de la UE»** en cada campaña (error rojo si no). También se puede confirmar a nivel de cuenta.
+- Editor agrega «Uruguay» como ubicación si la campaña no tiene ninguna: se reemplaza en el paso 3.
+- Si un archivo se importa dos veces, la segunda vez Editor «omite» las filas que ya existen.
+
 ## 3. Ajustes que se hacen en la web de Google Ads
 
 En cada campaña → Configuración:
