@@ -5,7 +5,10 @@ const s = await getSettings();
 <footer class="mt-16 bg-brand-900 text-slate-200">
   <div class="container-x grid gap-8 py-12 md:grid-cols-3">
     <div>
-      <p class="text-lg font-bold text-white">{s.businessName}</p>
+      <!-- El logo es azul marino: sobre el fondo oscuro va en una tarjeta blanca. -->
+      <a href={url('/')} class="inline-block rounded-xl bg-white px-4 py-3">
+        <img src={url('/uploads/logo.webp')} alt={s.businessName} width="180" height="40" loading="lazy" class="h-10 w-auto" />
+      </a>
       <p class="mt-2 text-sm">{s.tagline}.</p>
       <p class="mt-2 text-sm">Solo servicio técnico: no vendemos repuestos sueltos.</p>
     </div>

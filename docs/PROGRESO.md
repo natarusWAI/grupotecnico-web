@@ -182,3 +182,4 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - `public/og-default.png` (1200×630) rehecho desde el original: se ve más nítido al compartir en WhatsApp y redes.
 - Nuevo `public/logo.png` (600 px) y campo `logo` en el JSON-LD de `LocalBusiness`.
 - El pie sigue con el nombre en texto: el logo azul marino no se lee sobre el fondo `brand-900`. Favicon y apple-touch-icon siguen saliendo del isotipo vectorial.
+- Pie: el nombre en texto pasó a ser el logo dentro de una tarjeta blanca (el negocio pasó una versión con fondo blanco). Se reusa `logo.webp` sobre fondo blanco, que da el mismo resultado sin otro archivo para descargar.
