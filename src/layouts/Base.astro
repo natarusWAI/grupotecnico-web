@@ -27,6 +27,7 @@ const business = {
   description: s.tagline,
   url: new URL(url('/'), Astro.site).href,
   image: ogImage.href,
+  logo: new URL(url('/logo.png'), Astro.site).href,
   telephone: s.phones.map((p) => `+598 ${p.number.replace(/^0/, '')}`),
   email: s.email,
   foundingDate: String(s.foundingYear),

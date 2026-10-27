@@ -175,3 +175,10 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   - Probar el login de `/admin` y el formulario en el dominio.
   - Search Console y el sitio web de la ficha de Google.
   - Recién después, avisarle al tercero que puede dar de baja el hosting.
+
+## 2026-10-26 · Logo en alta resolución
+- El negocio pasó el logo completo en PNG (2056×765, fondo transparente). Es el mismo diseño, con más resolución.
+- `public/uploads/logo.webp` regenerado recortado a 539×120 (3× para el header de 40 px); el `<img>` pasa a 180×40.
+- `public/og-default.png` (1200×630) rehecho desde el original: se ve más nítido al compartir en WhatsApp y redes.
+- Nuevo `public/logo.png` (600 px) y campo `logo` en el JSON-LD de `LocalBusiness`.
+- El pie sigue con el nombre en texto: el logo azul marino no se lee sobre el fondo `brand-900`. Favicon y apple-touch-icon siguen saliendo del isotipo vectorial.
