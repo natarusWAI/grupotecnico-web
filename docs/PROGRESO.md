@@ -216,7 +216,7 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   2. Opcional: Administrar → Definiciones personalizadas → crear la dimensión de evento `method` para ver en los informes si el lead vino del formulario.
   3. Para probar en vivo: Administrar → DebugView, abriendo la web con https://tagassistant.google.com.
 - **Para el dueño, en Google Ads:**
-  1. GA4 → Administrar → Vinculación de productos → Vínculos de Google Ads → vincular la cuenta 546-504-1046 (con la misma cuenta de Google que administra las dos).
+  1. ~~Vincular GA4 con Google Ads~~: la cuenta 546-504-1046 ya estaba vinculada desde el 4 nov 2020, con publicidad personalizada habilitada.
   2. Google Ads → Objetivos → Conversiones → Nueva acción de conversión → Importar → Propiedades de Google Analytics 4 → Web → elegir los 3 eventos clave.
   3. Dejar `generate_lead` y `whatsapp_click` como conversión **principal** y `phone_click` como **secundaria** (el clic en «Llamar» no garantiza que la llamada se haga). Recuento: «Una» por clic.
 - **Pendiente:** la Fase 7 (publicidad) arranca cuando GA4 muestre los eventos clave con visitas reales.
