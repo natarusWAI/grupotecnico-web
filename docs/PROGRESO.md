@@ -190,3 +190,14 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
   2. Cambiar el sitio web de la ficha de Google a `https://grupotecnico.com.uy/`.
   3. En un par de días, avisarle al tercero que puede dar de baja el WordPress y la zona de `mauricioc.com`.
   4. Fase 6: IDs de GA4 (y Google Ads / Meta si hay publicidad).
+
+## 2026-10-27 · Search Console
+- Propiedad de dominio `grupotecnico.com.uy` creada con la cuenta `grupotecnico86@gmail.com` y verificada por DNS en Cloudflare.
+- Sitemap enviado: en una propiedad de dominio hay que poner la URL completa, `https://grupotecnico.com.uy/sitemap-index.xml`. Lo procesó bien: `sitemap-0.xml` con 13 URLs.
+- Se pidió la indexación de las 13 URLs (home, 3 servicios, zonas, blog y 6 posts).
+- `/reparacion-lavarropas/` figuraba indexada con 2 rutas de exploración con fallas: eran de la versión vieja de WordPress. La prueba en tiempo real da 1 elemento válido.
+- **Para retomar:**
+  1. En unos días, revisar en Indexación → Páginas que las URLs viejas de WordPress figuren como «Página con redirección» y no como 404.
+  2. Cambiar el sitio web de la ficha de Google a `https://grupotecnico.com.uy/`.
+  3. En un par de días, avisarle al tercero que puede dar de baja el WordPress y la zona de `mauricioc.com`.
+  4. Fase 6: IDs de GA4 (y Google Ads / Meta si hay publicidad).
