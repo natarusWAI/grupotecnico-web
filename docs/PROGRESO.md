@@ -236,3 +236,16 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Configuración en la web de Google Ads (2026-10-27):** ubicaciones (Montevideo, Ciudad de la Costa, Paso Carrasco, La Paz, Las Piedras, Barros Blancos; Pando excluido; opción «Presencia»), horario L-V 8-17 y sáb 8-13, «Maximizar clics» con CPC máximo US$ 0,70, sin socios de búsqueda ni Display, IA Max apagado, extensiones a nivel de cuenta.
 - **GA4 en vivo:** `whatsapp_click` llegó en tiempo real desde un celular. También llega `click` (clic de salida automático): no se marca como clave porque duplicaría. Había 3 eventos clave viejos del WordPress («a», «Botón», «clic») para desmarcar.
 - **Para retomar:** marcar los eventos clave cuando aparezcan en «Eventos recientes» (GA4 no deja crearlos a mano por nombre), importarlos en Ads y activar las 2 campañas.
+
+## 2026-10-28 · Conversiones importadas y campañas activas
+- **GA4:** `whatsapp_click`, `phone_click` y `generate_lead` marcados como eventos clave; desmarcados los viejos del WordPress («a», «Botón», «clic»). Recuento de los tres en «Una vez por sesión»: para eventos importados, Ads no deja cambiar el Count y lo toma de GA4.
+- `grupotecnico86@gmail.com` confirmado como Administrador en GA4.
+- **Google Ads:** importados desde GA4 (New conversion → Conversions on a website → URL → tildar la propiedad «GA4 - Grupo Técnico», sin «Google tag»).
+  - `generate_lead` → objetivo «Submit lead form», principal.
+  - `whatsapp_click` → objetivo «Contact», principal.
+  - `phone_click` → objetivo «Phone call lead», **secundaria**. Ads no deja crear un objetivo nuevo con una acción secundaria: se creó como principal, después se apagó «Account default» del objetivo y se pasó a secundaria.
+  - «Clicks to call» (de Google) queda principal pero fuera de los objetivos de la cuenta: «Contacts» es «website only».
+  - No tildar `purchase` (evento de fábrica de GA4) ni la otra propiedad que aparece en la cuenta de Google del usuario.
+- **Recursos revisados:** el sitelink viejo «Contacto» apunta a `https://grupotecnico.com.uy/#contacto` (la web nueva no tiene `/contacto`); sacado el sitelink de heladeras repetido. El negocio confirma que la visita es gratuita, así que «Visita Gratuita» queda.
+- **Campañas «Búsqueda - Lavarropas y secarropas» y «Búsqueda - Heladeras» activadas.**
+- **Seguimiento:** la primera semana, cada 2-3 días revisar Keywords → Search terms para sumar negativas. Con 15-30 conversiones por mes, pasar a «Maximizar conversiones».
