@@ -249,3 +249,8 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Recursos revisados:** el sitelink viejo «Contacto» apunta a `https://grupotecnico.com.uy/#contacto` (la web nueva no tiene `/contacto`); sacado el sitelink de heladeras repetido. El negocio confirma que la visita es gratuita, así que «Visita Gratuita» queda.
 - **Campañas «Búsqueda - Lavarropas y secarropas» y «Búsqueda - Heladeras» activadas.**
 - **Seguimiento:** la primera semana, cada 2-3 días revisar Keywords → Search terms para sumar negativas. Con 15-30 conversiones por mes, pasar a «Maximizar conversiones».
+
+## 2026-10-28 · LCP en celular
+- PageSpeed (celular) daba 84 de rendimiento con LCP de 4,2 s. El LCP era la foto de fondo del hero, que en celular casi no se ve bajo el degradado.
+- La foto ahora va en un `<picture>` que solo la descarga desde `md` (768 px); en celular queda el degradado sobre `brand-900`. En PC no cambia.
+- Lighthouse local (celular, 2 corridas): LCP de 1,3-1,4 s a 0,8 s, y el LCP pasa a ser el `<h1>`. PageSpeed varía bastante entre corridas porque mide desde servidores de Google lejos de Uruguay.
