@@ -254,3 +254,8 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - PageSpeed (celular) daba 84 de rendimiento con LCP de 4,2 s. El LCP era la foto de fondo del hero, que en celular casi no se ve bajo el degradado.
 - La foto ahora va en un `<picture>` que solo la descarga desde `md` (768 px); en celular queda el degradado sobre `brand-900`. En PC no cambia.
 - Lighthouse local (celular, 2 corridas): LCP de 1,3-1,4 s a 0,8 s, y el LCP pasa a ser el `<h1>`. PageSpeed varía bastante entre corridas porque mide desde servidores de Google lejos de Uruguay.
+
+## 2026-10-29 · Calidad del anuncio de Heladeras
+- Google marcaba «Average» por faltar palabras clave en los títulos. Cambiados 7 títulos (en Ads y en `docs/ads/4-anuncios.csv`): «Garantía por Escrito», «Especialistas en Inverter», «Factura Electrónica», «Reparamos en tu Casa», «Mvd y Ciudad de la Costa», «Técnicos Desde 1986» y «Pagá con Mercado Pago» → «¿Tu Heladera No Enfría?», «Service Heladeras Inverter», «Técnico en Refrigeración», «Service Heladera a Domicilio», «Service Heladeras Montevideo», «Freezer No Enfría» y «Arreglo de Heladeras». Factura y Mercado Pago siguen en la descripción 3.
+- Siguió en «Average» hasta sacar los pins de los 3 títulos de posición 1: ahí subió a «Good».
+- **Pendiente:** imágenes para las campañas (4 horizontales 1200×628 y 4 cuadradas 1200×1200 por campaña, sin texto ni logos, en una casa y no en un taller). Ver si el anuncio de Lavarropas/Secarropas también mejora sin pins.
