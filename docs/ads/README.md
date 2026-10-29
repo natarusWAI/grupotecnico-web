@@ -91,6 +91,6 @@ Los enlaces a sitios llevan el dominio completo (`https://grupotecnico.com.uy/..
 - **«Repuestos», «venta», «comprar»** van como negativas: el negocio no vende repuestos.
 - **Nunca decir «service oficial»** de una marca: no lo son, y Google puede rechazar el anuncio.
 - Los 3 títulos que nombran el servicio van **fijados en la posición 1**, para que el anuncio siempre diga qué se repara. Los demás rotan.
-  - Heladeras va **sin pins** (2026-10-29): con los títulos fijados la calidad del anuncio no pasaba de «Average»; sin ellos sube a «Good», y casi todos los títulos ya dicen «heladera».
+  - Los 3 anuncios van **sin pins** (2026-10-29): con los títulos fijados la calidad del anuncio no pasaba de «Average»; sin ellos sube a «Good», y casi todos los títulos ya nombran el equipo.
   - Títulos con marcas (Samsung, LG…) o barrios: no, aunque Google los sugiera. Las marcas ya están como palabras clave.
 - La página de destino es la del servicio, no la home: tiene WhatsApp, llamada y formulario arriba.
