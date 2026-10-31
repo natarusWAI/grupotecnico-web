@@ -273,4 +273,4 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - Nueva pregunta frecuente en lavarropas, heladeras y secarropas («¿Hay service oficial de Samsung o LG en Uruguay?»), que entra al schema FAQPage de cada página.
 - Aclaración en el post de códigos de error de Samsung, en la sección de reparación.
 - Pendiente de decidir: la negativa «oficial» en Ads se puso pensando en equipos en garantía de fábrica; con este dato, quien busca «service oficial samsung/lg» podría ser cliente. Los anuncios igual nunca deben decir que somos service oficial.
-- Decidido: se saca la negativa «oficial» de las dos campañas (`docs/ads/3-negativas.csv` y README). Falta quitarla a mano en Google Ads.
+- Decidido: se saca la negativa «oficial» de las dos campañas (`docs/ads/3-negativas.csv` y README). Quitada en Google Ads el 2026-10-31.
