@@ -260,3 +260,10 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - Siguió en «Average» hasta sacar los pins de los 3 títulos de posición 1: ahí subió a «Good».
 - **Lavarropas:** mismo arreglo. «Garantía por Escrito», «Factura Electrónica», «Reparamos en tu Casa», «Técnicos Desde 1986», «Mvd y Ciudad de la Costa» y «Pagá con Mercado Pago» → «¿Tu Lavarropas No Centrifuga?», «Lavarropas No Desagota», «Arreglo de Lavarropas», «Lavarropas No Carga Agua», «Service Lavarropas Montevideo» y «Lavarropas Pierde Agua», y sin pins: «Good». Secarropas también sin pins y en «Good».
 - **Imágenes cargadas (2026-10-29):** generadas con IA, 4 escenas por grupo (Heladeras, Lavarropas, Secarropas) en 1200×628 y 1200×1200, sin texto ni logos, en casa y no en taller. Prompts en la conversación del 2026-10-29. Reemplazarlas por fotos reales de trabajos cuando haya.
+
+## 2026-10-31 · Primera revisión de términos de búsqueda
+- **Search Console:** el informe de Indexación → Páginas todavía dice «Processing data». Las 301 de las URLs viejas del WordPress se probaron con curl contra el sitio en vivo y andan. Se vuelve a mirar el 2026-11-03, antes de pedir la baja del WordPress.
+- **Google Ads, 28 al 31/10:** 33 clics, US$ 21,97 y 2 conversiones (US$ 11 cada una). Casi todos los términos de búsqueda sirven; no se coló ninguna de las negativas que ya estaban.
+- **Confirmado por el negocio:** reparan General Electric (agregada a `brands` en `sitio.json`) y heladeras comerciales; no reparan aire acondicionado ni cámaras de frío.
+- **Negativas nuevas** (en `docs/ads/3-negativas.csv`): «oficial» en las dos campañas; «aire acondicionado», «aires acondicionados», «split», «camara frigorifica», «camaras frigorificas» y «camara de frio» en Heladeras.
+- **En observación:** las búsquedas tipo «por qué mi freezer no enfría» (4 clics, unos US$ 2,50) y «tecnicos en refrigeración» (3 clics, US$ 2,04). Si en 2 semanas no convierten, se recortan.
