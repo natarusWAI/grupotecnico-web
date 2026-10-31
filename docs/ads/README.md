@@ -89,7 +89,7 @@ Los enlaces a sitios llevan el dominio completo (`https://grupotecnico.com.uy/..
 - **Drean, Patrick y Philco** van como negativas: no se reparan (confirmado por el negocio).
 - **«Carga de gas»** va como negativa: no se hace (confirmado por el negocio).
 - **«Repuestos», «venta», «comprar»** van como negativas: el negocio no vende repuestos.
-- **«Oficial»** va como negativa (2026-10-31): quien busca el service oficial suele tener el equipo en garantía de fábrica.
+- **«Oficial» no va como negativa** (sacada el 2026-10-31): Samsung y LG no tienen service oficial en Uruguay, así que quien lo busca puede ser cliente. Revisar en los términos de búsqueda si esas búsquedas convierten.
 - **Aire acondicionado, split y cámaras de frío** van como negativas en Heladeras (2026-10-31): no se reparan. Las heladeras comerciales sí, así que «comercial» no va.
 - **Nunca decir «service oficial»** de una marca: no lo son, y Google puede rechazar el anuncio.
 - Los 3 títulos que nombran el servicio van **fijados en la posición 1**, para que el anuncio siempre diga qué se repara. Los demás rotan.
