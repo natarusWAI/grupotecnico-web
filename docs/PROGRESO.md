@@ -265,5 +265,5 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Search Console:** el informe de Indexación → Páginas todavía dice «Processing data». Las 301 de las URLs viejas del WordPress se probaron con curl contra el sitio en vivo y andan. Se vuelve a mirar el 2026-11-03, antes de pedir la baja del WordPress.
 - **Google Ads, 28 al 31/10:** 33 clics, US$ 21,97 y 2 conversiones (US$ 11 cada una). Casi todos los términos de búsqueda sirven; no se coló ninguna de las negativas que ya estaban.
 - **Confirmado por el negocio:** reparan General Electric (agregada a `brands` en `sitio.json`) y heladeras comerciales; no reparan aire acondicionado ni cámaras de frío.
-- **Negativas nuevas** (en `docs/ads/3-negativas.csv`): «oficial» en las dos campañas; «aire acondicionado», «aires acondicionados», «split», «camara frigorifica», «camaras frigorificas» y «camara de frio» en Heladeras.
+- **Negativas nuevas**, cargadas en Google Ads el mismo día (también en `docs/ads/3-negativas.csv`): «oficial» en las dos campañas; «aire acondicionado», «aires acondicionados», «split», «camara frigorifica», «camaras frigorificas» y «camara de frio» en Heladeras.
 - **En observación:** las búsquedas tipo «por qué mi freezer no enfría» (4 clics, unos US$ 2,50) y «tecnicos en refrigeración» (3 clics, US$ 2,04). Si en 2 semanas no convierten, se recortan.
