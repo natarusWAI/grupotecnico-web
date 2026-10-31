@@ -22,6 +22,8 @@ faqs:
     a: Sí. Si nos escribís en horario de atención, coordinamos la visita en el día en Montevideo, Ciudad de la Costa hasta el Peaje de Pando, Ruta 5 hasta Las Piedras y Ruta 8 hasta Barros Blancos.
   - q: ¿Qué garantía tiene la reparación?
     a: Bombas, electroválvulas, correas y resistencias tienen 2 años; el resto de los repuestos, 1 año. Te lo dejamos por escrito.
+  - q: ¿Hay service oficial de Samsung o LG en Uruguay?
+    a: No. Samsung y LG no tienen service oficial en Uruguay, así que la reparación de sus lavarropas la hacen técnicos independientes. Nosotros los reparamos en tu casa, con repuestos originales y garantía por escrito.
   - q: ¿Venden repuestos?
     a: No vendemos repuestos sueltos. Hacemos la reparación completa con repuestos originales.
   - q: ¿Cómo puedo pagar?

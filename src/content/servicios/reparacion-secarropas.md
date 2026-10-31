@@ -22,6 +22,8 @@ faqs:
     a: No. Lo reparamos en tu casa, en la misma visita. No retiramos equipos para llevarlos a un taller.
   - q: ¿Qué garantía tiene la reparación?
     a: Resistencias, correas, termostatos y bombas tienen 2 años; el resto de los repuestos, 1 año. Te lo dejamos por escrito.
+  - q: ¿Hay service oficial de Samsung o LG en Uruguay?
+    a: No. Samsung y LG no tienen service oficial en Uruguay, así que la reparación de sus secarropas la hacen técnicos independientes. Nosotros los reparamos en tu casa, con repuestos originales y garantía por escrito.
   - q: ¿Venden repuestos?
     a: No vendemos repuestos sueltos. Hacemos la reparación completa con repuestos originales.
   - q: ¿Cómo puedo pagar?

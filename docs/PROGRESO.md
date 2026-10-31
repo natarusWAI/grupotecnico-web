@@ -267,3 +267,9 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Confirmado por el negocio:** reparan General Electric (agregada a `brands` en `sitio.json`) y heladeras comerciales; no reparan aire acondicionado ni cámaras de frío.
 - **Negativas nuevas**, cargadas en Google Ads el mismo día (también en `docs/ads/3-negativas.csv`): «oficial» en las dos campañas; «aire acondicionado», «aires acondicionados», «split», «camara frigorifica», «camaras frigorificas» y «camara de frio» en Heladeras.
 - **En observación:** las búsquedas tipo «por qué mi freezer no enfría» (4 clics, unos US$ 2,50) y «tecnicos en refrigeración» (3 clics, US$ 2,04). Si en 2 semanas no convierten, se recortan.
+
+## 2026-10-31 · Samsung y LG sin service oficial en Uruguay
+- Dato confirmado por el negocio: Samsung y LG no tienen service oficial en Uruguay.
+- Nueva pregunta frecuente en lavarropas, heladeras y secarropas («¿Hay service oficial de Samsung o LG en Uruguay?»), que entra al schema FAQPage de cada página.
+- Aclaración en el post de códigos de error de Samsung, en la sección de reparación.
+- Pendiente de decidir: la negativa «oficial» en Ads se puso pensando en equipos en garantía de fábrica; con este dato, quien busca «service oficial samsung/lg» podría ser cliente. Los anuncios igual nunca deben decir que somos service oficial.

@@ -78,4 +78,4 @@ Cualquier código que vuelva a aparecer después de desenchufar el equipo y revi
 
 ## Reparación de lavarropas Samsung a domicilio
 
-En Grupo Técnico [reparamos lavarropas](/reparacion-lavarropas) Samsung y de todas las marcas en tu casa, en Montevideo y Ciudad de la Costa. Pasanos el código que te aparece y el modelo, vamos en el día y te damos el presupuesto sin costo. Trabajamos con repuestos originales y garantía por escrito de 1 o 2 años según el repuesto. [Escribinos](/#contacto).
+Samsung no tiene service oficial en Uruguay, así que la reparación la hacen técnicos independientes. En Grupo Técnico [reparamos lavarropas](/reparacion-lavarropas) Samsung y de todas las marcas en tu casa, en Montevideo y Ciudad de la Costa. Pasanos el código que te aparece y el modelo, vamos en el día y te damos el presupuesto sin costo. Trabajamos con repuestos originales y garantía por escrito de 1 o 2 años según el repuesto. [Escribinos](/#contacto).

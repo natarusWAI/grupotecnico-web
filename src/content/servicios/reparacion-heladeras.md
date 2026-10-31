@@ -19,6 +19,8 @@ faqs:
     a: La visita y el presupuesto no tienen costo. Solo pagás si aprobás la reparación.
   - q: ¿Qué garantía tiene la reparación?
     a: Depende del repuesto. Termostatos, resistencias y condensadores tienen 2 años; el resto de los repuestos, como el motocompresor o la plaqueta, tiene 1 año. Te lo dejamos por escrito.
+  - q: ¿Hay service oficial de Samsung o LG en Uruguay?
+    a: No. Samsung y LG no tienen service oficial en Uruguay, así que la reparación de sus heladeras la hacen técnicos independientes. Nosotros las reparamos en tu casa, con repuestos originales y garantía por escrito.
   - q: ¿Venden repuestos?
     a: No vendemos repuestos sueltos. Hacemos la reparación completa con repuestos originales.
   - q: ¿Cómo puedo pagar?
