@@ -279,4 +279,5 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - El informe Indexación → Páginas sigue en «Processing data» (la propiedad es del 27/10).
 - URL inspection: `/reparacion-lavarropas/` (con barra) figura «URL is on Google». Sin barra da «URL is unknown to Google» porque es una redirección 308 que no está en el sitemap: es normal. Inspeccionar siempre con barra final.
 - Breadcrumbs marcados inválidos en las páginas de servicio: al último `ListItem` le faltaba `item`. Ahora lleva la URL canónica de la página.
-- **Para retomar:** cuando Cloudflare publique, en URL inspection → «Test live» y después «Request indexing» en lavarropas, heladeras y secarropas; y en Enhancements → Breadcrumbs → «Validate fix».
+- Test live con la corrección publicada: «Breadcrumbs: 1 valid item detected». Pedida la indexación de `/reparacion-lavarropas/`, `/reparacion-heladeras/` y `/reparacion-secarropas/` (2026-11-02).
+- **Para retomar:** si todavía no se hizo, Enhancements → Breadcrumbs → «Validate fix».
