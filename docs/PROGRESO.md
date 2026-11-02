@@ -274,3 +274,9 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - Aclaración en el post de códigos de error de Samsung, en la sección de reparación.
 - Pendiente de decidir: la negativa «oficial» en Ads se puso pensando en equipos en garantía de fábrica; con este dato, quien busca «service oficial samsung/lg» podría ser cliente. Los anuncios igual nunca deben decir que somos service oficial.
 - Decidido: se saca la negativa «oficial» de las dos campañas (`docs/ads/3-negativas.csv` y README). Quitada en Google Ads el 2026-10-31.
+
+## 2026-11-02 · Search Console: páginas indexadas y breadcrumbs corregidos
+- El informe Indexación → Páginas sigue en «Processing data» (la propiedad es del 27/10).
+- URL inspection: `/reparacion-lavarropas/` (con barra) figura «URL is on Google». Sin barra da «URL is unknown to Google» porque es una redirección 308 que no está en el sitemap: es normal. Inspeccionar siempre con barra final.
+- Breadcrumbs marcados inválidos en las páginas de servicio: al último `ListItem` le faltaba `item`. Ahora lleva la URL canónica de la página.
+- **Para retomar:** cuando Cloudflare publique, en URL inspection → «Test live» y después «Request indexing» en lavarropas, heladeras y secarropas; y en Enhancements → Breadcrumbs → «Validate fix».
