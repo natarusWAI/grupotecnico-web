@@ -303,3 +303,8 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - Las búsquedas con «oficial» (Samsung y LG) tuvieron impresiones pero ningún clic: se siguen observando.
 - **Negativas cargadas en Google Ads (2026-11-07)** en las 2 campañas, desde Search keywords → Negative search keywords.
 - **Pendiente:** antes de pasar a «Maximizar conversiones», confirmar con el negocio cuántas consultas reales llegaron (Ads cuenta 28 en 10 días).
+
+## 2026-11-07 · Baja del WordPress y conteo de GA4
+- **WordPress:** avisado al tercero que puede dar de baja el cPanel y la zona de `mauricioc.com`. Las 11 redirecciones del sitio viejo se probaron en vivo (todas 301) y las sirve Cloudflare, así que no dependen del cPanel. El informe Indexación → Páginas de Search Console seguía en «Processing data»: se revisa en la revisión mensual de diciembre.
+- **GA4** (eventos clave, todo el tráfico, no solo Ads): `whatsapp_click` 24 veces (21 usuarios), `generate_lead` 7 y `phone_click` 7. Los 21 usuarios de WhatsApp más los 7 formularios dan 28, lo mismo que cuenta Ads: el conteo cierra.
+- Un `whatsapp_click` es abrir WhatsApp, no mandar el mensaje. Falta que el negocio confirme cuántos chats y formularios llegaron de verdad antes de pasar a «Maximizar conversiones».
