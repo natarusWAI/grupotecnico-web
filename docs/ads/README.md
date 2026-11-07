@@ -91,6 +91,8 @@ Los enlaces a sitios llevan el dominio completo (`https://grupotecnico.com.uy/..
 - **«Repuestos», «venta», «comprar»** van como negativas: el negocio no vende repuestos.
 - **«Oficial» no va como negativa** (sacada el 2026-10-31): Samsung y LG no tienen service oficial en Uruguay, así que quien lo busca puede ser cliente. Revisar en los términos de búsqueda si esas búsquedas convierten.
 - **Aire acondicionado, split y cámaras de frío** van como negativas en Heladeras (2026-10-31): no se reparan. Las heladeras comerciales sí, así que «comercial» no va.
+- **Búsquedas de «hacelo vos»** van como negativas en las 2 campañas (2026-11-07): «porque», «por que», «por qué», «que hacer», «que puede ser», «que pasa» y «como arreglar» (con y sin tilde). Del 28/10 al 6/11 se llevaron unos 8 clics sin ninguna conversión: es gente que busca la causa para arreglarlo sola.
+- **«Gas»** va como negativa en Heladeras (2026-11-07), además de «carga de gas»: se colaban «cuánto sale ponerle gas a una heladera» y «cambiar el gas de la heladera».
 - **Nunca decir «service oficial»** de una marca: no lo son, y Google puede rechazar el anuncio.
 - Los 3 títulos que nombran el servicio van **fijados en la posición 1**, para que el anuncio siempre diga qué se repara. Los demás rotan.
   - Los 3 anuncios van **sin pins** (2026-10-29): con los títulos fijados la calidad del anuncio no pasaba de «Average»; sin ellos sube a «Good», y casi todos los títulos ya nombran el equipo.

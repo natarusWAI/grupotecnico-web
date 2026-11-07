@@ -294,3 +294,11 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - «heladera no enfria» es la que más gasta (33 clics, US$ 20,36) y convierte poco (2,5 conv, US$ 8,29 cada una), pero trae trabajo.
 - «tecnico en refrigeracion» sale de observación: 1 conversión con 3 clics.
 - El archivo era el informe de palabras clave, no el de términos de búsqueda: las negativas nuevas quedan para cuando llegue ese informe.
+
+## 2026-11-07 · Google Ads: términos de búsqueda del 28/10 al 6/11
+- Google muestra solo 44 de los 141 clics (US$ 25,87, 7,5 conv). Los otros 97 clics van a «Other search terms» (búsquedas que Google no detalla por privacidad), que convierten mejor (20,7 conv, US$ 2,78 cada una).
+- Se colaron búsquedas de gente que quiere arreglarlo sola («por qué no centrifuga la lavadora», «que puede ser», «que hacer cuando…»): unos 8 clics y US$ 4,60 sin ninguna conversión. Y «cuánto sale ponerle gas a una heladera», que no está cubierta por la negativa «carga de gas».
+- **Negativas nuevas** en `docs/ads/3-negativas.csv`: «porque», «por que», «por qué», «que hacer», «qué hacer», «que puede ser», «qué puede ser», «que pasa», «qué pasa», «como arreglar» y «cómo arreglar» en las 2 campañas, y «gas» en Heladeras.
+- Con esas negativas no hace falta pausar «lavarropas no centrifuga» ni «freezer no enfria»: lo que gastaban sin convertir eran sobre todo esas búsquedas. Se vuelven a mirar el 2026-11-21.
+- Las búsquedas con «oficial» (Samsung y LG) tuvieron impresiones pero ningún clic: se siguen observando.
+- **Pendiente:** cargar las negativas en Google Ads. Y antes de pasar a «Maximizar conversiones», confirmar con el negocio cuántas consultas reales llegaron (Ads cuenta 28 en 10 días).
