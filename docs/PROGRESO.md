@@ -281,3 +281,8 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - Breadcrumbs marcados inválidos en las páginas de servicio: al último `ListItem` le faltaba `item`. Ahora lleva la URL canónica de la página.
 - Test live con la corrección publicada: «Breadcrumbs: 1 valid item detected». Pedida la indexación de `/reparacion-lavarropas/`, `/reparacion-heladeras/` y `/reparacion-secarropas/` (2026-11-02).
 - **Para retomar:** si todavía no se hizo, Enhancements → Breadcrumbs → «Validate fix».
+
+## 2026-11-07 · Breadcrumbs: validación en curso
+- Search Console → Breadcrumbs muestra «Missing field "itemListElement"» con «Validation looking good» (iniciada el 2026-11-02). Los ítems afectados bajaron de 8 a 2.
+- En vivo, las 3 páginas de servicio (las únicas con `BreadcrumbList`) tienen `itemListElement` completo. Los ítems afectados son páginas que Google rastreó antes del cambio: se van solos cuando las vuelve a rastrear. No hay nada que corregir.
+- **Para retomar:** la validación termina sola en unas 2 semanas. Sigue pendiente revisar Indexación → Páginas (redirecciones del WordPress).
