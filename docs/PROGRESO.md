@@ -301,4 +301,5 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **Negativas nuevas** en `docs/ads/3-negativas.csv`: «porque», «por que», «por qué», «que hacer», «qué hacer», «que puede ser», «qué puede ser», «que pasa», «qué pasa», «como arreglar» y «cómo arreglar» en las 2 campañas, y «gas» en Heladeras.
 - Con esas negativas no hace falta pausar «lavarropas no centrifuga» ni «freezer no enfria»: lo que gastaban sin convertir eran sobre todo esas búsquedas. Se vuelven a mirar el 2026-11-21.
 - Las búsquedas con «oficial» (Samsung y LG) tuvieron impresiones pero ningún clic: se siguen observando.
-- **Pendiente:** cargar las negativas en Google Ads. Y antes de pasar a «Maximizar conversiones», confirmar con el negocio cuántas consultas reales llegaron (Ads cuenta 28 en 10 días).
+- **Negativas cargadas en Google Ads (2026-11-07)** en las 2 campañas, desde Search keywords → Negative search keywords.
+- **Pendiente:** antes de pasar a «Maximizar conversiones», confirmar con el negocio cuántas consultas reales llegaron (Ads cuenta 28 en 10 días).
