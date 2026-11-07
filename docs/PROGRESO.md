@@ -286,3 +286,11 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - Search Console → Breadcrumbs muestra «Missing field "itemListElement"» con «Validation looking good» (iniciada el 2026-11-02). Los ítems afectados bajaron de 8 a 2.
 - En vivo, las 3 páginas de servicio (las únicas con `BreadcrumbList`) tienen `itemListElement` completo. Los ítems afectados son páginas que Google rastreó antes del cambio: se van solos cuando las vuelve a rastrear. No hay nada que corregir.
 - **Para retomar:** la validación termina sola en unas 2 semanas. Sigue pendiente revisar Indexación → Páginas (redirecciones del WordPress).
+
+## 2026-11-07 · Google Ads: palabras clave del 28/10 al 6/11
+- **Total:** 141 clics, US$ 83,42 y 28,2 conversiones (US$ 2,96 cada una). Lavarropas y secarropas: 77 clics, US$ 43,07, 15,7 conv. Heladeras: 64 clics, US$ 40,35, 12,5 conv.
+- **Las que mejor andan:** «tecnico lavarropas» (4 conv con 7 clics), «service de heladeras» (4 con 7), «arreglo lavarropas», «service lavarropas panavox», «service lavarropas montevideo», «service heladeras montevideo» y «service lavarropas» (2 cada una).
+- **Las que gastan sin convertir:** «lavarropas no centrifuga» (20 clics, US$ 11,63, 0 conv), «freezer no enfria» (6 clics, US$ 3,64, 0) y «lavarropas no carga agua» (5 clics, US$ 2,67, 0). Los síntomas de lavarropas suman unos 30 clics y US$ 17 sin ninguna conversión: es probable que busquen cómo arreglarlo solos.
+- «heladera no enfria» es la que más gasta (33 clics, US$ 20,36) y convierte poco (2,5 conv, US$ 8,29 cada una), pero trae trabajo.
+- «tecnico en refrigeracion» sale de observación: 1 conversión con 3 clics.
+- El archivo era el informe de palabras clave, no el de términos de búsqueda: las negativas nuevas quedan para cuando llegue ese informe.
