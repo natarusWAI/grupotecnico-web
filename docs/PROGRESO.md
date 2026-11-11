@@ -308,3 +308,8 @@ Claude: agregá una entrada al terminar cada tarea (fecha, qué se hizo, decisio
 - **WordPress:** avisado al tercero que puede dar de baja el cPanel y la zona de `mauricioc.com`. Las 11 redirecciones del sitio viejo se probaron en vivo (todas 301) y las sirve Cloudflare, así que no dependen del cPanel. El informe Indexación → Páginas de Search Console seguía en «Processing data»: se revisa en la revisión mensual de diciembre.
 - **GA4** (eventos clave, todo el tráfico, no solo Ads): `whatsapp_click` 24 veces (21 usuarios), `generate_lead` 7 y `phone_click` 7. Los 21 usuarios de WhatsApp más los 7 formularios dan 28, lo mismo que cuenta Ads: el conteo cierra.
 - Un `whatsapp_click` es abrir WhatsApp, no mandar el mensaje. Falta que el negocio confirme cuántos chats y formularios llegaron de verdad antes de pasar a «Maximizar conversiones».
+
+## 2026-11-11 · Breadcrumbs: queda 1 ítem pendiente
+- Mail de Search Console: la validación sigue en «Validation looking good». Afectados: de 2 bajó a 1; Passed 0, Failed 0, Other 8.
+- El único pendiente es `/tag/problemas-de-centrifugado/`, una etiqueta del WordPress viejo que Google rastreó por última vez el 7/10, antes de la migración. Ya devuelve un 301 a `/blog/` (regla `/tag/*` en `public/_redirects`, probada en vivo con curl).
+- No hay nada que corregir: cuando Google la vuelva a rastrear y vea la redirección, la va a sacar del informe y la validación se cierra sola.
